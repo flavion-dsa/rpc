@@ -20,7 +20,7 @@
     }
 
     .masthead.segment {
-      min-height: 700px;
+      min-height: 240px;
       padding: 1em 0em;
     }
 
@@ -33,7 +33,7 @@
     }
 
     .masthead h1.ui.header {
-      margin-top: 5em;
+      margin-top: 1.5em;
       margin-bottom: 0em;
       font-size: 3.5em;
       font-weight: normal;
@@ -86,33 +86,43 @@
       display: none;
     }
 
+    .mob.item {
+        display: none;
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
       }
 
       .secondary.pointing.menu .item,
-      .secondary.pointing.menu .menu {
+      .secondary.pointing.menu .menu,
+      .secondary.pointing.mob.menu {
         display: none;
       }
       .secondary.pointing.menu .toc.item {
         display: block;
       }
       .masthead.segment {
-        min-height: 300px;
+        min-height: 150px;
       }
       .masthead h1.ui.header {
         font-size: 2em;
-        margin-top: 4em;
+        margin-top: 1.5em;
       }
       .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
       }
+
+      .mob.item {
+        display: block;
+      }
+      
     }
 
     .ui.inverted.masthead.segment {
-      background-image: url('assests/imgs/banner.jpg');
+     
       background-blend-mode: soft-light;
       background-size: cover;
       background-attachment: fixed;
@@ -166,7 +176,7 @@
 
   <div class="ui large top fixed hidden menu">
     <div class="ui container">
-      <a class="active item">Home</a>
+      <a class="item">Home</a>
       <a class="item">About</a>
       <a class="item">Useful Links</a>
     </div>
@@ -177,7 +187,7 @@
   <div class="ui vertical inverted sidebar menu">
     <div class="ui vertical inverted accordion">
       <div class="item">
-        <div class="active title">Home</div>
+        <a class="title" href="../">Home</a>
       </div>
       <div class="item">
         <div class="title">
@@ -188,7 +198,7 @@
           <div class="menu">
             <a class="item">Mission & History</a>
             <a class="item">The Choir</a>
-            <a class="item" href="/members">The Members</a>
+            <a class="active item" href="/members">The Members</a>
           </div>
         </div>
       </div>
@@ -250,13 +260,95 @@
 
       <div class="ui text container">
         <h1 class="ui inverted header">
-          Resurrection Parish Choir
+          The Members
         </h1>
       </div>
 
     </div>
-    <div class="ui vertical stripe segment">
 
+    <div class="ui vertical stripe segment">
+      <div class="ui stackable two column grid container">
+
+          <div class="three wide left floated column">
+            <div class="ui teal header">About</div>
+            <div class="row">
+              <div class="ui secondary pointing vertical mob menu">
+                  <a class="item">Mission & History</a>
+                  <a class="item">The Choir</a>
+                  <a class="active item" href="#">The Members</a>
+                </div>
+                <div class="mob item">
+                  <div class="ui vertical accordion">
+                    <div class="title">
+                      <i class="dropdown icon"></i>
+                    </div>
+                    <div class="content">
+                      <div class="ui vertical secondary menu">
+                        <a class="item">Mission & History</a>
+                        <a class="item">The Choir</a>
+                        <a class="item" href="/members">The Members</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+
+          <div class="eleven wide right floated column">
+            <div class="ui grid container">
+                <div class="row">
+                  <div class="ui red header">SOPRANO</div>
+                </div>
+                <div class="row">
+                  <div class="ui small stackable circular images">
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                  </div>  
+                </div>
+    
+                <div class="row">
+                  <div class="ui red header">ALTO</div>
+                </div>
+                <div class="row">
+                  <div class="ui small stackable circular images">
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                  </div>  
+                </div>
+    
+                <div class="row">
+                  <div class="ui red header">TENOR</div>
+                </div>
+                <div class="row">
+                  <div class="ui small stackable circular images">
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                  </div>  
+                </div>
+    
+                <div class="row">
+                  <div class="ui red header">BASS</div>
+                </div>
+                <div class="row">
+                  <div class="ui small stackable circular images">
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
+                  </div>  
+                </div>
+
+            </div>
+          </div>
+
+      </div>
     </div>
 
     <div class="ui inverted vertical footer segment">
