@@ -174,11 +174,21 @@
 
 <body>
 
-  <div class="ui large top fixed hidden menu">
-    <div class="ui container">
-      <a class="item">Home</a>
-      <a class="item">About</a>
+  <div class="ui borderless large top fixed hidden menu">
+    <div class="ui right fitted item"
+      style="margin-right: 9em;">
+      <a class="item" href="../">Home</a>
+      <div class="ui dropdown link item">
+        About
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item">Mission & History</a>
+          <a class="item">The Choir</a>
+          <a class="item" href="/members">The Members</a>
+        </div>
+      </div>
       <a class="item">Useful Links</a>
+      <a class="item">Media</a>
     </div>
   </div>
 
@@ -230,9 +240,8 @@
             <i class="sidebar icon"></i>
           </a>
           
-          <a class="active item">Home</a>
-
-          <div class="ui pointing dropdown link item">
+          <a class="item" href="../">Home</a>
+          <div class="ui dropdown link item">
             About
             <i class="dropdown icon"></i>
             <div class="menu">
@@ -244,7 +253,7 @@
 
           <a class="item">Useful Links</a>
           <div class="menu">
-            <div class="ui pointing dropdown link item">
+            <div class="ui dropdown link item">
               Media
               <i class="dropdown icon"></i>
               <div class="menu">
