@@ -15,6 +15,7 @@
   <title>Resurrection Parish Choir</title>
 
   <style type="text/css">
+  
     .hidden.menu {
       display: none;
     }
@@ -128,6 +129,10 @@
       background-attachment: fixed;
     }
 
+    .ui.red.header, .ui.circular.images {
+      visibility: hidden;
+    }
+
 
   </style>
 
@@ -164,6 +169,31 @@
 
         $('.ui.accordion')
           .accordion()
+        ;
+
+        $('.ui.red.header')
+          .visibility({
+            once: true,
+            onTopVisible: function() {
+              $(this).transition({
+                animation: 'fade up',
+                duration: 1000
+              });
+            }
+          })
+        ;
+
+        $('.ui.circular.images')
+          .visibility({
+            once: true,
+            onTopVisible: function() {
+              $(this).find('.image').transition({
+                animation: 'fade up',
+                duration: 1000,
+                interval:300
+              });
+            }
+          })
         ;
 
       })
@@ -311,7 +341,7 @@
                 </div>
                 <div class="row">
                   <div class="ui small stackable circular images">
-                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
@@ -323,7 +353,7 @@
                 </div>
                 <div class="row">
                   <div class="ui small stackable circular images">
-                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
@@ -335,7 +365,7 @@
                 </div>
                 <div class="row">
                   <div class="ui small stackable circular images">
-                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
@@ -347,7 +377,7 @@
                 </div>
                 <div class="row">
                   <div class="ui small stackable circular images">
-                    <img class="ui image" src="assests/imgs/helen.jpg"></img>\
+                    <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
                     <img class="ui image" src="assests/imgs/helen.jpg"></img>
