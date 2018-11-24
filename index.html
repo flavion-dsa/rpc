@@ -90,6 +90,7 @@
       .ui.fixed.menu {
         display: none !important;
       }
+
       .secondary.pointing.menu .item,
       .secondary.pointing.menu .menu {
         display: none;
@@ -140,19 +141,24 @@
               $('.fixed.menu').transition('fade out');
             }
           })
-          ;
+        ;
 
         // create sidebar and attach to menu open
         $('.ui.sidebar')
           .sidebar('attach events', '.toc.item')
-          ;
+        ;
 
         $('.ui.dropdown')
-          .dropdown()
-          ;
+          .dropdown({on: 'hover'})
+        ;
+
+        $('.ui.accordion')
+          .accordion()
+        ;
 
       })
-      ;
+    ;
+
   </script>
 </head>
 
@@ -168,11 +174,38 @@
 
 
   <!-- Sidebar Menu -->
-  <div class="ui vertical inverted right sidebar menu">
-    <a class="active item">Home</a>
-    <a class="item" href="about.html">About</a>
-    <a class="item">Useful Links</a>
-    <a class="item">Media</a>
+  <div class="ui vertical inverted sidebar menu">
+    <div class="ui vertical inverted accordion">
+      <div class="item">
+        <div class="active title">Home</div>
+      </div>
+      <div class="item">
+        <div class="title">
+          About
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+          <div class="menu">
+            <a class="item">The History</a>
+            <a class="item">The Choir</a>
+            <a class="item" href="members.html">The Members</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">
+          Media
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+          <div class="menu">
+            <div class="item">PDF</div>
+            <div class="item">MP3</div>
+            <div class="item">Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -182,12 +215,26 @@
 
       <div class="ui container">
         <div class="ui large inverted right floated secondary pointing menu">
+
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
           
           <a class="active item">Home</a>
-          <a class="item" href="about.html">About</a>
+
+          <div class="ui pointing dropdown link item">
+            About
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item">The History</a>
+              <a class="item">The Choir</a>
+              <a class="item" href="members.html">The Members</a>
+            </div>
+          </div>
+
           <a class="item">Useful Links</a>
           <div class="menu">
-            <div class="ui dropdown item">
+            <div class="ui pointing dropdown link item">
               Media
               <i class="dropdown icon"></i>
               <div class="menu">
@@ -197,9 +244,7 @@
               </div>
             </div>
           </div>
-          <a class="toc item">
-            <i class="sidebar icon"></i>
-          </a>
+          
         </div>
       </div>
 
