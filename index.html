@@ -33,7 +33,7 @@
     }
 
     .masthead h1.ui.header {
-      margin-top: 5em;
+      margin-top: 6em;
       margin-bottom: 0em;
       font-size: 3.5em;
       font-weight: normal;
@@ -111,7 +111,7 @@
       }
       .masthead h1.ui.header {
         font-size: 2em;
-        margin-top: 4em;
+        margin-top: 6em;
       }
       .masthead h2 {
         margin-top: 0.5em;
@@ -143,6 +143,11 @@
       background-attachment: fixed;
       background-position: center;
     }
+
+    .ui.left.floated.menu .circular.image {
+      background: rgba(255, 255, 255, 0.2)
+    }
+
 
   </style>
 
@@ -189,20 +194,30 @@
 
 <body>
 
-  <div class="ui large top fixed hidden menu">
-    <div class="ui container">
-      <a class="active item">Home</a>
-      <a class="item">About</a>
-      <a class="item">Useful Links</a>
+    <div class="ui borderless large top fixed hidden menu">
+      <div class="ui right fitted item"
+        style="margin-right: 9em;">
+        <a class="item">Home</a>
+        <div class="ui dropdown link item">
+          About
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item">Mission & History</a>
+            <a class="item">The Choir</a>
+            <a class="item" href="members/">The Members</a>
+          </div>
+        </div>
+        <a class="item">Useful Links</a>
+        <a class="item">Media</a>
+      </div>
     </div>
-  </div>
 
 
   <!-- Sidebar Menu -->
   <div class="ui vertical inverted sidebar menu">
     <div class="ui vertical inverted accordion">
-      <div class="item">
-        <div class="active title">Home</div>
+      <div class="active item">
+        <div class="title">Home</div>
       </div>
       <div class="item">
         <div class="title">
@@ -213,7 +228,7 @@
           <div class="menu">
             <a class="item">Mission & History</a>
             <a class="item">The Choir</a>
-            <a class="item" href="/members">The Members</a>
+            <a class="item" href="members/">The Members</a>
           </div>
         </div>
       </div>
@@ -238,9 +253,15 @@
   <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment">
 
-      <div class="ui container">
-        <div class="ui large inverted right floated secondary pointing menu">
 
+      <div class="ui container">
+        <div class="ui large inverted left floated secondary menu">
+          <div class="item">
+            <img class="ui small circular image" src="assests/imgs/choir_logo.png">
+          </div>
+        </div>
+        <div class="ui large inverted right floated secondary pointing menu">
+          
           <a class="toc item">
             <i class="sidebar icon"></i>
           </a>
@@ -253,7 +274,7 @@
             <div class="menu">
               <a class="item">Mission & History</a>
               <a class="item">The Choir</a>
-              <a class="item" href="/members">The Members</a>
+              <a class="item" href="members/">The Members</a>
             </div>
           </div>
 
