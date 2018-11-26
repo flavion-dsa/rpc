@@ -45,15 +45,14 @@
     }
 
     .ui.vertical.stripe {
-      padding: 8em 0em;
+      padding: 3em 0em;
     }
 
     .ui.vertical.stripe h3 {
       font-size: 2em;
     }
 
-    .ui.vertical.stripe .button+h3,
-    .ui.vertical.stripe p+h3 {
+    .ui.vertical.stripe .button+h3 {
       margin-top: 3em;
     }
 
@@ -62,7 +61,16 @@
     }
 
     .ui.vertical.stripe p {
-      font-size: 1.33em;
+      flex: 1 0 auto;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0.5em 0em 2em;
+    }
+
+    .ui.vertical.stripe .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
     }
 
     .ui.vertical.stripe .horizontal.divider {
@@ -109,9 +117,14 @@
         margin-top: 0.5em;
         font-size: 1.5em;
       }
+
+      #banner2 {
+        min-height: 150px;
+      }
+
     }
 
-    .ui.inverted.masthead.segment {
+    .inverted.masthead.segment {
       background-image: url('assests/imgs/banner.jpg');
       background-blend-mode: soft-light;
       background-size: cover;
@@ -119,6 +132,17 @@
       background-position: center;
     }
 
+    .banner.segment {
+      min-height: 350px;
+    }
+
+    .vertical.stripe.banner.segment#banner2 {
+      background-image: url('assests/imgs/banner_2.jpg');
+      background-blend-mode: soft-light;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
 
   </style>
 
@@ -256,9 +280,42 @@
       </div>
 
     </div>
-    <div class="ui vertical stripe segment">
 
+    <div class="ui vertical stripe segment">
+      <div class="ui three column center aligned divided relaxed stackable grid container">
+        <div class="row" style="padding: 3em 0em">
+          <h3 class="ui huge teal header">News & Events</h3>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="ui large header">Feast of Christ the King</div>
+            <p>The Resurrection Parish Choir celebrated the feast of Christ the King on 25th of November.</p>
+            <button class="ui animated button">
+              <div class="ui visible content">Read more</div>
+              <div class="hidden content"><i class="right arrow icon"></i></div>
+            </button>
+          </div>
+          <div class="column">
+            <div class="ui large header">Feast of Assumption</div>
+            <p>The Resurrection Parish Choir celebrated the feast of Assumption of Our Lady on 15th of August.</p>
+            <button class="ui animated button">
+              <div class="ui visible content">Read more</div>
+              <div class="hidden content"><i class="right arrow icon"></i></div>
+            </button>
+          </div>
+          <div class="column">
+            <div class="ui large header">Launch of Logo</div>
+            <p>The Resurrection Parish Choir lauched their logo on the solemnity of Christ the King.</p>
+            <button class="ui animated button">
+              <div class="ui visible content">Read more</div>
+              <div class="hidden content"><i class="right arrow icon"></i></div>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="ui vertical stripe banner segment" id="banner2"></div>     
 
     <div class="ui inverted vertical footer segment">
       <div class="ui container">
