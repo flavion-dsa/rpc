@@ -169,19 +169,6 @@
           .accordion()
         ;
 
-        $('.ui.search')
-          .search({
-            apiSettings: {
-              action: 'search',
-              url: './assests/data/hymns?q={query}'
-            },
-            fields: {
-              result: 'hymn_name'
-            },
-            searchFields: ['hymn_name'],
-            minCharacters: 1
-          })
-        ;
 
       })
     ;
@@ -333,16 +320,6 @@
                 <div class="ui red header">ABOUT US</div>
                 <p>Founded in the year 2008, the <b>Resurrection Parish Choir</b> has established itself as one of professional choirs in the Salesian province of Mumbai(Bombay), serving its mother church in the city of Virar through their liturgical & choral initiatives that enlighten, enrich and educate its parishioners.</p>
                 <p>Led by the Choir Director, Nelson Matthew, the Resurrection Parish Choir has been described as one of the leading liturgical choirs in the province. The Choir is comprised of 20 college students and working youths who have joined the group for their love for music, bonding and most of whom don't have any prior grounding or musical training.</p>
-              </div>
-
-              <div class="ui row">
-                <div class="ui search">
-                  <div class="ui icon input">
-                    <input class="prompt" type="text" placeholder="Search">
-                    <i class="search icon"></i>
-                  </div>
-                  <div class="result"></div>
-                </div>
               </div>
 
             </div>
