@@ -195,6 +195,7 @@
           }
         }
 
+        /*
         function pageSearch(content) {
           $('.ui.search')
             .search({
@@ -208,7 +209,22 @@
               fullTextSearch: false
             })
           ;
-        }
+        }*/
+
+        $('.ui.search')
+          .search({
+            apiSettings: {
+              url: 'assets/data/hymns?q={query}',
+              onResponse: function (jsonResponse) {
+                return {results: jsonResponse};
+              }
+            },
+            fields: {
+              title: 'hymn_name'
+            },
+            fullTextSearch: false
+          })
+        ;
 
         $('#next-page')
           .click(function () {
