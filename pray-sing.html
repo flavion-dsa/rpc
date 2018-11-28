@@ -4,7 +4,7 @@
 <head>
   <!-- Standard Meta -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
 
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
@@ -137,11 +137,6 @@
 
   </style>
 
-  <script src="semantic/dist/components/visibility.js"></script>
-  <script src="semantic/dist/components/sidebar.js"></script>
-  <script src="semantic/dist/components/transition.js"></script>
-  <script src="semantic/dist/components/dropdown.js"></script>
-
   <script src="javascript/pray-sing.js"></script>
 
   <script>
@@ -181,7 +176,7 @@
         var per_page = 10;
         var limit = per_page;
 
-        loadJSON(function(response) {
+        loadJSON(function (response) {
           result = JSON.parse(response);  
           max_size = result.length;
           
@@ -210,8 +205,7 @@
           ;
         }
 
-        /*
-        $('.ui.search')
+        /* $('.ui.search')
           .search({
             apiSettings: {
               url: 'assets/data/hymns?q={query}',
@@ -224,7 +218,7 @@
             },
             fullTextSearch: false
           })
-        ;*/
+        ; */
 
         $('#next-page')
           .click(function () {

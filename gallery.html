@@ -13,15 +13,16 @@
 
   <!-- Site Properties -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Resurrection Parish Choir</title>  
+  <title>Resurrection Parish Choir</title>
 
   <style type="text/css">
+  
     .hidden.menu {
       display: none;
     }
 
     .masthead.segment {
-      min-height: 700px;
+      min-height: 240px;
       padding: 1em 0em;
     }
 
@@ -34,7 +35,7 @@
     }
 
     .masthead h1.ui.header {
-      margin-top: 6em;
+      margin-top: 1.5em;
       margin-bottom: 0em;
       font-size: 3.5em;
       font-weight: normal;
@@ -46,14 +47,15 @@
     }
 
     .ui.vertical.stripe {
-      padding: 3em 0em;
+      padding: 8em 0em;
     }
 
     .ui.vertical.stripe h3 {
       font-size: 2em;
     }
 
-    .ui.vertical.stripe .button+h3 {
+    .ui.vertical.stripe .button+h3,
+    .ui.vertical.stripe p+h3 {
       margin-top: 3em;
     }
 
@@ -62,16 +64,7 @@
     }
 
     .ui.vertical.stripe p {
-      flex: 1 0 auto;
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 0.5em 0em 2em;
-    }
-
-    .ui.vertical.stripe .column {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
+      font-size: 1.33em;
     }
 
     .ui.vertical.stripe .horizontal.divider {
@@ -95,63 +88,57 @@
       display: none;
     }
 
+    .mob.item {
+        display: none;
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
       }
 
       .secondary.pointing.menu .item,
-      .secondary.pointing.menu .menu {
+      .secondary.pointing.menu .menu,
+      .secondary.pointing.mob.menu {
         display: none;
       }
       .secondary.pointing.menu .toc.item {
         display: block;
       }
       .masthead.segment {
-        min-height: 300px;
+        min-height: 150px;
       }
       .masthead h1.ui.header {
-        font-size: 1.8em;
-        margin-top: 8em;
+        font-size: 2em;
+        margin-top: 1.5em;
       }
       .masthead h2 {
         margin-top: 0.5em;
         font-size: 1.5em;
       }
 
-      #banner2 {
-        min-height: 200px;
+      .mob.item {
+        display: block;
       }
-
+      
     }
 
-    .inverted.masthead.segment {
-      background-image: url('assets/imgs/banner.jpg');
-      background-blend-mode: overlay;
+    .ui.inverted.masthead.segment {
+     
+      background-blend-mode: soft-light;
       background-size: cover;
       background-attachment: fixed;
-      background-position: center;
     }
 
-    .banner.segment {
-      min-height: 350px;
-    }
-
-    .vertical.stripe.banner.segment#banner2 {
-      background-image: url('assets/imgs/banner_2.jpg');
-      background-blend-mode: overlay;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-    }
-
-    .ui.left.floated.menu .circular.image {
-      background: rgba(255, 255, 255, 0.2)
+    .ui.red.header, .ui.circular.images {
+      visibility: hidden;
     }
 
 
-  </style>
-
+	</style>
+	
+	<script src="javascript/gallery.js"></script>
+  
   <script>
     $(document)
       .ready(function () {
@@ -182,6 +169,33 @@
           .accordion()
         ;
 
+        var result;
+        var gallery = $('#g-images')
+
+        loadJSON(function (response) {
+          result = JSON.parse(response); 
+        })
+
+        $('.ui.selection.dropdown')
+          .dropdown({
+            on: 'click',
+            onChange: function (value, text, $selectedItem) {
+              makeGallery(result, text);  
+            }
+          })
+        ;
+
+        function makeGallery (array, text) {
+          for (x in array) {
+            if (array[x].event == text) {
+              gallery.empty();
+              for (var i=0; i<array[x].links.length; i++) {
+                gallery.append("<img class=\"ui image\" src="+array[x].links[i]+"></img>")
+              }
+            }
+          }
+        }
+
       })
     ;
 
@@ -190,38 +204,30 @@
 
 <body>
 
-    <div class="ui borderless large top fixed hidden menu">
-      <div class="ui right fitted item"
-        style="margin-right: 9em;">
-        <a class="item">Home</a>
-        <div class="ui dropdown link item">
-          About
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="history">Mission & History</a>
-            <a class="item">The Choir</a>
-            <a class="item" href="members">The Members</a>
-          </div>
-        </div>
-        <a class="item">Useful Links</a>
-        <div class="ui dropdown link item">
-          Media
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="pray-sing">Hymnal</a>
-            <div class="item">MP3</div>
-            <div class="item">Video</div>
-          </div>
+  <div class="ui borderless large top fixed hidden menu">
+    <div class="ui right fitted item"
+      style="margin-right: 9em;">
+      <a class="item" href="../">Home</a>
+      <div class="ui dropdown link item">
+        About
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="history">Mission & History</a>
+          <a class="item">The Choir</a>
+          <a class="item">The Members</a>
         </div>
       </div>
+      <a class="item">Useful Links</a>
+      <a class="item">Media</a>
     </div>
+  </div>
 
 
   <!-- Sidebar Menu -->
   <div class="ui vertical inverted sidebar menu">
     <div class="ui vertical inverted accordion">
-      <div class="active item">
-        <div class="title">Home</div>
+      <div class="item">
+        <a class="title" href="../">Home</a>
       </div>
       <div class="item">
         <div class="title">
@@ -232,7 +238,7 @@
           <div class="menu">
             <a class="item" href="history">Mission & History</a>
             <a class="item">The Choir</a>
-            <a class="item" href="members">The Members</a>
+            <a class="active item">The Members</a>
           </div>
         </div>
       </div>
@@ -243,7 +249,7 @@
         </div>
         <div class="content">
           <div class="menu">
-            <a class="item" href="pray-sing">Hymnal</a>
+            <div class="item">PDF</div>
             <div class="item">MP3</div>
             <div class="item">Video</div>
           </div>
@@ -257,28 +263,21 @@
   <div class="pusher">
     <div class="ui inverted vertical masthead center aligned segment">
 
-
       <div class="ui container">
-        <div class="ui large inverted left floated secondary menu">
-          <div class="item">
-            <img class="ui small circular image" src="assets/imgs/choir_logo.png">
-          </div>
-        </div>
         <div class="ui large inverted right floated secondary pointing menu">
-          
+
           <a class="toc item">
             <i class="sidebar icon"></i>
           </a>
           
-          <a class="active item">Home</a>
-
+          <a class="item" href="../">Home</a>
           <div class="ui dropdown link item">
             About
             <i class="dropdown icon"></i>
             <div class="menu">
               <a class="item" href="history">Mission & History</a>
               <a class="item">The Choir</a>
-              <a class="item" href="members">The Members</a>
+              <a class="item">The Members</a>
             </div>
           </div>
 
@@ -288,7 +287,7 @@
               Media
               <i class="dropdown icon"></i>
               <div class="menu">
-                <a class="item" href="pray-sing">Hymnal</a>
+                <div class="item">PDF</div>
                 <div class="item">MP3</div>
                 <div class="item">Video</div>
               </div>
@@ -300,61 +299,34 @@
 
       <div class="ui text container">
         <h1 class="ui inverted header">
-          Resurrection Parish Choir
+          Gallery
         </h1>
       </div>
 
     </div>
 
     <div class="ui vertical stripe segment">
-      <div class="ui three column center aligned divided relaxed stackable grid container">
-        <div class="row">
-          <h3 class="ui huge teal header">News & Events</h3>
-        </div>
-        <div class="row">
-          <div class="column">
-            <div class="ui large header">Feast of Christ the King</div>
-            <p>The Resurrection Parish Choir celebrated the feast of Christ the King on 25th of November.</p>
-            <button class="ui animated button">
-              <div class="ui visible content">Read more</div>
-              <div class="hidden content"><i class="right arrow icon"></i></div>
-            </button>
-          </div>
-          <div class="column">
-            <div class="ui large header">Feast of Assumption</div>
-            <p>The Resurrection Parish Choir celebrated the feast of Assumption of Our Lady on 15th of August.</p>
-            <button class="ui animated button">
-              <div class="ui visible content">Read more</div>
-              <div class="hidden content"><i class="right arrow icon"></i></div>
-            </button>
-          </div>
-          <div class="column">
-            <div class="ui large header">Launch of Logo</div>
-            <p>The Resurrection Parish Choir lauched their logo on the solemnity of Christ the King.</p>
-            <button class="ui animated button">
-              <div class="ui visible content">Read more</div>
-              <div class="hidden content"><i class="right arrow icon"></i></div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="ui stackable two column grid container">
 
-    <div class="ui vertical stripe banner segment" id="banner2"></div>
-    
-    <div class="ui vertical stripe segment" style="background: burlywood;">
-      <div class="ui center aligned grid container">
-        <div class="row">
-          <button class="ui large circular basic icon button" onclick="window.location.href='mailto:resurrectionparishchoir@gmail.com'"">
-            <i class="envelope outline icon"></i>
-          </a>
-          <button class="ui large circular basic icon button" onclick="window.location.href='https://www.facebook.com/Resurrection-Parish-Choir-390749221437123/'">
-            <i class="facebook f icon"></i>
-          </button>
-          <button class="ui large circular basic icon button" onclick="window.location.href='https://instagram.com/resurrectionparishchoir'">
-            <i class="instagram icon"></i>
-          </button>
+        <div class="three wide left floated column">
+          <div class="ui container">
+            <div class="ui form">
+              <div class="field">
+                <select class="ui selection dropdown" id="event-select">
+                  <option value="E17">Easter 2017</option>
+                  <option value="C17">Christmas 2017</option>
+                </select>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="thirteen wide right floated column">
+          <div class="ui container">
+            <div class="ui large rounded images" id="g-images"></div>
+          </div>
+        </div>
+
       </div>
     </div>
 
