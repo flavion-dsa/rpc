@@ -204,19 +204,11 @@
           
           $('#feast-season').append(toTitleCase(todays_feast.season)+" Season");
           $('#feast-title').append(todays_feast.celebrations[0].title);
-          var m_color = '';
-          switch (todays_feast.celebrations[0].colour) {
-            case 'green': 
-                    m_color = 'inverted green';
-                    break;
-            case 'red': 
-                    m_color = 'inverted red';
-                    break;
-            case 'violet': 
-                    m_color = 'inverted violet';
-                    break;
+          var m_color = todays_feast.celebrations[0].colour;
+  
+          if (m_color != 'white') {
+            $('#feast-color').addClass('tertiary inverted '+m_color);
           }
-          $('#feast-color').addClass(m_color);
         });
 
         function toTitleCase(string) {
