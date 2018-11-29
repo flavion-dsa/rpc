@@ -14,7 +14,7 @@
   <!-- Site Properties -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <title>Resurrection Parish Choir</title>
-  
+ 
   <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative|Montserrat' rel='stylesheet'>
 
   <style type="text/css">
@@ -124,8 +124,8 @@
         font-size: 1.5em;
       }
 
-      #banner2 {
-        min-height: 200px;
+      .vertical.stripe.banner.segment {
+        min-height: 300px;
       }
 
       .ui.vertical.quote h1.ui.quote.header {
@@ -144,15 +144,20 @@
     }
 
     .banner.segment {
-      min-height: 350px;
+      min-height: 432px;
     }
 
-    .vertical.stripe.banner.segment#banner2 {
-      background-image: url('assets/imgs/banner_2.jpg');
+    .vertical.stripe.banner.segment {
       background-blend-mode: overlay;
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
+    }
+    #banner-2 {
+      background-image: url('assets/imgs/banner_2.jpg');
+    }
+    #banner-3 {
+      background-image: url('assets/imgs/banner_3.jpg');
     }
 
     .ui.left.floated.menu .circular.image {
@@ -161,6 +166,8 @@
 
 
   </style>
+
+  <script src="javascript/calendar.js"></script>
 
   <script>
     $(document)
@@ -191,6 +198,30 @@
         $('.ui.accordion')
           .accordion()
         ;
+
+        fetchTodaysData(function (response) {
+          var todays_feast = JSON.parse(response);
+          
+          $('#feast-season').append(toTitleCase(todays_feast.season)+" Season");
+          $('#feast-title').append(todays_feast.celebrations[0].title);
+          var m_color = '';
+          switch (todays_feast.celebrations[0].colour) {
+            case 'green': 
+                    m_color = 'inverted green';
+                    break;
+            case 'red': 
+                    m_color = 'inverted red';
+                    break;
+            case 'violet': 
+                    m_color = 'inverted violet';
+                    break;
+          }
+          $('#feast-color').addClass(m_color);
+        });
+
+        function toTitleCase(string) {
+          return string.charAt(0).toUpperCase() + string.slice(1);
+        }
 
       })
     ;
@@ -353,7 +384,26 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe banner segment" id="banner2"></div>
+    <div class="ui vertical stripe banner segment" id="banner-2"></div>
+
+    <div class="ui vertical stripe segment">
+      <div class="ui two column center aligned stackable grid container">
+        <h3 class="ui teal header" style="margin-bottom:2em">Liturgical Calendar</h3>
+        <div class="row">
+          <div class="column">
+            
+          </div>
+          <div class="column">
+            <div class="ui segment" id="feast-color">
+              <h2 id="feast-season"></h2>
+              <h2 class="ui header" id="feast-title"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui vertical stripe banner segment" id="banner-3"></div>
 
     <div class="ui vertical quote segment">
       <div class="ui stackable grid container">
