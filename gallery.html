@@ -170,10 +170,12 @@
         ;
 
         var result;
+        var default_text = $('#event-select option:selected').text();
         var gallery = $('#g-images')
 
         loadJSON(function (response) {
-          result = JSON.parse(response); 
+          result = JSON.parse(response);
+          makeGallery(result, default_text);
         })
 
         $('.ui.selection.dropdown')
@@ -313,8 +315,9 @@
             <div class="ui form">
               <div class="field">
                 <select class="ui selection dropdown" id="event-select">
-                  <option value="E17">Easter 2017</option>
                   <option value="C17">Christmas 2017</option>
+                  <option value="E17">Easter 2017</option>
+                  <option value="E16">Easter 2016</option>
                 </select>
               </div>
             </div>
@@ -322,7 +325,7 @@
         </div>
 
         <div class="thirteen wide right floated column">
-          <div class="ui container">
+          <div class="ui center aligned container">
             <div class="ui large rounded images" id="g-images"></div>
           </div>
         </div>

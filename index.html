@@ -13,7 +13,9 @@
 
   <!-- Site Properties -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Resurrection Parish Choir</title>  
+  <title>Resurrection Parish Choir</title>
+  
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
 
   <style type="text/css">
     .hidden.menu {
@@ -68,7 +70,7 @@
       margin: 0.5em 0em 2em;
     }
 
-    .ui.vertical.stripe .column {
+    .ui.vertical.stripe .news.column {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -78,13 +80,14 @@
       margin: 3em 0em;
     }
 
-    .quote.stripe.segment {
-      padding: 0em;
+    .ui.vertical.quote {
+      padding: 3em 0em;
     }
 
-    .quote.stripe.segment .grid .column {
-      padding-top: 5em;
-      padding-bottom: 5em;
+    .ui.vertical.quote h1.ui.quote.header {
+      margin-top: 0.5em;
+      font-size: 4em;
+      font-family: 'Cinzel Decorative';
     }
 
     .footer.segment {
@@ -121,6 +124,11 @@
 
       #banner2 {
         min-height: 200px;
+      }
+
+      .ui.vertical.quote h1.ui.quote.header {
+        margin-top: 0em;
+        font-size: 2.33em;
       }
 
     }
@@ -312,7 +320,7 @@
           <h3 class="ui huge teal header">News & Events</h3>
         </div>
         <div class="row">
-          <div class="column">
+          <div class="news column">
             <div class="ui large header">Feast of Christ the King</div>
             <p>The Resurrection Parish Choir celebrated the feast of Christ the King on 25th of November.</p>
             <button class="ui animated button">
@@ -320,7 +328,7 @@
               <div class="hidden content"><i class="right arrow icon"></i></div>
             </button>
           </div>
-          <div class="column">
+          <div class="news column">
             <div class="ui large header">Feast of Assumption</div>
             <p>The Resurrection Parish Choir celebrated the feast of Assumption of Our Lady on 15th of August.</p>
             <button class="ui animated button">
@@ -328,7 +336,7 @@
               <div class="hidden content"><i class="right arrow icon"></i></div>
             </button>
           </div>
-          <div class="column">
+          <div class="news column">
             <div class="ui large header">Launch of Logo</div>
             <p>The Resurrection Parish Choir lauched their logo on the solemnity of Christ the King.</p>
             <button class="ui animated button">
@@ -341,20 +349,37 @@
     </div>
 
     <div class="ui vertical stripe banner segment" id="banner2"></div>
-    
-    <div class="ui vertical stripe segment" style="background: burlywood;">
-      <div class="ui center aligned grid container">
+
+    <div class="ui vertical quote segment">
+      <div class="ui stackable grid container">
         <div class="row">
-          <button class="ui large circular basic icon button" onclick="window.location.href='mailto:resurrectionparishchoir@gmail.com'"">
-            <i class="envelope outline icon"></i>
-          </a>
-          <button class="ui large circular basic icon button" onclick="window.location.href='https://www.facebook.com/Resurrection-Parish-Choir-390749221437123/'">
-            <i class="facebook f icon"></i>
-          </button>
-          <button class="ui large circular basic icon button" onclick="window.location.href='https://instagram.com/resurrectionparishchoir'">
-            <i class="instagram icon"></i>
-          </button>
+          <div class="left floated column">
+            <i class="grey big quote left icon"></i>
+          </div>
+          <div class="fourteen wide column">
+            <h1 class="ui quote center aligned teal header">
+              <i>He Who Sings Well, Prays Twice</i>
+            </h1>
+          </div>
+          <div class="right aligned column">    
+            <i class="grey big quote right icon"></i>
+          </div>
         </div>
+        
+      </div>
+    </div>
+    
+    <div class="ui vertical stripe segment" style="background: cadetblue;">
+      <div class="ui center aligned container">
+        <a class="ui large inverted circular icon button" href="mailto:resurrectionparishchoir@gmail.com">
+          <i class="envelope outline icon"></i>
+        </a>
+        <a class="ui large inverted circular icon button" href="https://www.facebook.com/Resurrection-Parish-Choir-390749221437123/">
+          <i class="facebook f icon"></i>
+        </a>
+        <a class="ui large inverted circular icon button" href="https://instagram.com/resurrectionparishchoir">
+          <i class="instagram icon"></i>
+        </a>
       </div>
     </div>
 
