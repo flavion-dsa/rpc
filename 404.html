@@ -53,12 +53,8 @@
       padding: 8em 0em;
     }
 
-    .ui.vertical.stripe h3 {
-      font-size: 2em;
-    }
-
     .ui.vertical.stripe .button+h3,
-    .ui.vertical.stripe p+h3 {
+    .ui.vertical.stripe p {
       margin-top: 3em;
     }
 
@@ -254,7 +250,7 @@
             About
             <i class="dropdown icon"></i>
             <div class="menu">
-              <a class="active item">Mission & History</a>
+              <a class="item" href="history">Mission & History</a>
               <a class="item">The Choir</a>
               <a class="item" href="members">The Members</a>
             </div>
@@ -278,58 +274,33 @@
 
       <div class="ui text container">
         <h1 class="ui inverted header">
-          Mission & History
+          Error 404
         </h1>
       </div>
 
     </div>
 
     <div class="ui vertical stripe segment">
-      <div class="ui stackable two column grid container">
-
-          <div class="three wide left floated column">
-            <div class="ui teal header">About</div>
-            <div class="row">
-              <div class="ui secondary pointing vertical mob menu">
-                  <a class="active item">Mission & History</a>
-                  <a class="item">The Choir</a>
-                  <a class="item" href="members">The Members</a>
-                </div>
-                <div class="mob item">
-                  <div class="ui vertical accordion">
-                    <div class="title">
-                      <i class="dropdown icon"></i>
-                    </div>
-                    <div class="content">
-                      <div class="ui vertical secondary menu">
-                        <a class="active item">Mission & History</a>
-                        <a class="item">The Choir</a>
-                        <a class="item" href="members">The Members</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
+      <div class="ui container">
+        <h1 class="ui red header">HTTP Error 404: Not Found</h1>
+        <h3 class="ui header">The resource you are looking for has been removed, had its name changed, or is temporarily unavailable.</h3>
+        <div class="ui message">
+          <div class="header">Most likely causes:</div>
+          <div class="list">
+            <li>The directory or file specified does not exist on the Web server.</li>
+            <li>The URL contains a typographical error.</li>
+            <li>A custom filter or module, such as URLScan, restricts access to the file.</li>
           </div>
-
-
-          <div class="eleven wide right floated column">
-            <div class="ui grid container">
-                
-              <div class="ui row">
-                <div class="ui red header">AIM & MISSION</div>
-                <p>The Resurrection Parish Choir aims at enriching the liturgical services held in the Parish. The Resurrection Parish Choir sings at the Parish Mass, special feasts and liturgies, occasions, and festivals in the Parish.</p>
-              </div>
-
-              <div class="ui row">
-                <div class="ui red header">ABOUT US</div>
-                <p>Founded in the year 2008, the <b>Resurrection Parish Choir</b> has established itself as one of professional choirs in the Salesian province of Mumbai(Bombay), serving its mother church in the city of Virar through their liturgical & choral initiatives that enlighten, enrich and educate its parishioners.</p>
-                <p>Led by the Choir Director, Nelson Matthew, the Resurrection Parish Choir has been described as one of the leading liturgical choirs in the province. The Choir is comprised of 20 college students and working youths who have joined the group for their love for music, bonding and most of whom don't have any prior grounding or musical training.</p>
-              </div>
-
-            </div>
+        </div>
+        <div class="ui message">
+          <div class="header">Things you can try:</div>
+          <div class="list">
+            <li>Create the content on the Web server.</li>
+            <li>Review the browser URL.</li>
+            <li>Create a tracing rule to track failed requests for this HTTP status code and see which module is calling SetStatus.</li>
           </div>
-
+        </div>
+        <a class="ui primary button" href="../">Return to Hompage</a>
       </div>
     </div>
 

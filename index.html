@@ -199,6 +199,7 @@
           .accordion()
         ;
 
+        getCountdown();
         fetchTodaysData(function (response) {
           var todays_feast = JSON.parse(response);
           
@@ -210,6 +211,20 @@
             $('#feast-color').addClass('tertiary inverted '+m_color);
           }
         });
+
+        function getCountdown () {
+          var countdown_date = new Date("Dec 25, 2018 00:00:00").getTime();
+          var interval = setInterval(function () {
+            var now = new Date().getTime();
+            var time_left = countdown_date - now;
+            
+            var CONST = 1000*60;
+            $('#days-left').html(Math.floor(time_left/(CONST*60*24)));
+            $('#hrs-left').html(Math.floor((time_left%(CONST*60*24))/(CONST*60)));
+            $('#min-left').html(Math.floor((time_left%(CONST*60))/(CONST)));
+            $('#sec-left').html(Math.floor((time_left%(CONST))/1000));  
+          }, 1000);
+        }
 
         function toTitleCase(string) {
           return string.charAt(0).toUpperCase() + string.slice(1);
@@ -343,7 +358,7 @@
     </div>
 
     <div class="ui vertical stripe segment">
-      <div class="ui three column center aligned divided relaxed stackable grid container">
+      <div class="ui three column center aligned divided very relaxed stackable grid container">
         <div class="row">
           <h3 class="ui huge teal header">News & Events</h3>
         </div>
@@ -351,7 +366,7 @@
           <div class="news column">
             <div class="ui large header">Feast of Christ the King</div>
             <p>The Resurrection Parish Choir celebrated the feast of Christ the King on 25th of November.</p>
-            <button class="ui animated button">
+            <button class="ui secondary basic animated button">
               <div class="ui visible content">Read more</div>
               <div class="hidden content"><i class="right arrow icon"></i></div>
             </button>
@@ -359,7 +374,7 @@
           <div class="news column">
             <div class="ui large header">Feast of Assumption</div>
             <p>The Resurrection Parish Choir celebrated the feast of Assumption of Our Lady on 15th of August.</p>
-            <button class="ui animated button">
+            <button class="ui secondary basic animated button">
               <div class="ui visible content">Read more</div>
               <div class="hidden content"><i class="right arrow icon"></i></div>
             </button>
@@ -367,7 +382,7 @@
           <div class="news column">
             <div class="ui large header">Launch of Logo</div>
             <p>The Resurrection Parish Choir lauched their logo on the solemnity of Christ the King.</p>
-            <button class="ui animated button">
+            <button class="ui secondary basic animated button">
               <div class="ui visible content">Read more</div>
               <div class="hidden content"><i class="right arrow icon"></i></div>
             </button>
@@ -379,13 +394,33 @@
     <div class="ui vertical stripe banner segment" id="banner-2"></div>
 
     <div class="ui vertical stripe segment">
-      <div class="ui two column center aligned stackable grid container">
-        <h3 class="ui teal header" style="margin-bottom:2em">Liturgical Calendar</h3>
+      <div class="ui two column center aligned very relaxed stackable grid container">
+        <h3 class="ui teal header" style="margin-bottom:1.33em">Liturgical Calendar</h3>
         <div class="row">
           <div class="column">
-            
+            <div class="ui secondary inverted segment">
+              <div class="ui four small inverted statistics">
+                <div class="statistic">
+                  <div class="value" id="days-left">0</div>
+                  <div class="label">Days</div>
+                </div>
+                <div class="statistic">
+                  <div class="value" id="hrs-left">0</div>
+                  <div class="label">Hours</div>
+                </div>
+                <div class="statistic">
+                  <div class="value" id="min-left">0</div>
+                  <div class="label">Minutes</div>
+                </div>
+                <div class="statistic">
+                  <div class="value" id="sec-left">0</div>
+                  <div class="label">Seconds</div>
+                </div>
+              </div>
+              <h2 class="ui header">UNTIL CHRISTMAS</h2>
+            </div>
           </div>
-          <div class="column">
+          <div class="column" style="display: flex">
             <div class="ui segment" id="feast-color">
               <h2 id="feast-season"></h2>
               <h2 class="ui header" id="feast-title"></h2>
