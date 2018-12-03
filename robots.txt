@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /data/
 Disallow: /semantic/
 Disallow: /imports/
+Disallow: /assets/imgs/profile/
 
 Sitemap: http://www.resurrectionparishchoir.gq/sitemap.xml
