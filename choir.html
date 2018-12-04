@@ -13,7 +13,7 @@
 
   <!-- Site Properties -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <title>Members | Resurrection Parish Choir</title>
+  <title>Choir | Resurrection Parish Choir</title>
 
   <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative|Montserrat' rel='stylesheet'>
 
@@ -68,6 +68,7 @@
 
     .ui.vertical.stripe p {
       font-size: 1.33em;
+      text-align: justify;
     }
 
     .ui.vertical.stripe .horizontal.divider {
@@ -137,11 +138,6 @@
       background-attachment: fixed;
     }
 
-    .ui.red.header, .ui.circular.images {
-      visibility: hidden;
-    }
-
-
   </style>
   
   <script>
@@ -174,31 +170,6 @@
           .accordion()
         ;
 
-        $('.ui.red.header')
-          .visibility({
-            once: true,
-            onTopVisible: function() {
-              $(this).transition({
-                animation: 'fade up',
-                duration: 1000
-              });
-            }
-          })
-        ;
-
-        $('.ui.circular.images')
-          .visibility({
-            once: true,
-            onTopVisible: function() {
-              $(this).find('.image').transition({
-                animation: 'fade up',
-                duration: 1000,
-                interval:300
-              });
-            }
-          })
-        ;
-
       })
     ;
 
@@ -227,8 +198,8 @@
         <i class="dropdown icon"></i>
         <div class="menu">
           <a class="item" href="history">Mission & History</a>
-          <a class="item" href="choir">The Choir</a>
-          <a class="active item">The Members</a>
+          <a class="item">The Choir</a>
+          <a class="item" href="members">The Members</a>
         </div>
       </div>
       <a class="item" href="gallery">Gallery</a>
@@ -251,8 +222,8 @@
         <div class="content">
           <div class="menu">
             <a class="item" href="history">Mission & History</a>
-            <a class="item" href="choir">The Choir</a>
-            <a class="active item">The Members</a>
+            <a class="active item">The Choir</a>
+            <a class="item" href="members">The Members</a>
           </div>
         </div>
       </div>
@@ -293,8 +264,8 @@
             <i class="dropdown icon"></i>
             <div class="menu">
               <a class="item" href="history">Mission & History</a>
-              <a class="item" href="choir">The Choir</a>
-              <a class="active item">The Members</a>
+              <a class="active item">The Choir</a>
+              <a class="item" href="members">The Members</a>
             </div>
           </div>
 
@@ -316,7 +287,7 @@
 
       <div class="ui text container">
         <h1 class="ui inverted header">
-          The Members
+          The Choir
         </h1>
       </div>
 
@@ -330,8 +301,8 @@
             <div class="row">
               <div class="ui secondary pointing vertical mob menu">
                   <a class="item" href="history">Mission & History</a>
-                  <a class="item" href="choir">The Choir</a>
-                  <a class="active item">The Members</a>
+                  <a class="active item">The Choir</a>
+                  <a class="item" href="members">The Members</a>
                 </div>
                 <div class="mob item">
                   <div class="ui vertical accordion">
@@ -341,8 +312,8 @@
                     <div class="content">
                       <div class="ui vertical secondary menu">
                         <a class="item" href="history">Mission & History</a>
-                        <a class="item" href="choir">The Choir</a>
-                        <a class="active item">The Members</a>
+                        <a class="active item">The Choir</a>
+                        <a class="item" href="members">The Members</a>
                       </div>
                     </div>
                   </div>
@@ -351,56 +322,27 @@
           </div>
 
 
-          <div class="eleven wide right floated column">
-            <div class="ui grid container">
-                <div class="row">
-                  <div class="ui red header">SOPRANO</div>
-                </div>
-                <div class="row">
-                  <div class="ui small stackable circular images">
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                  </div>  
-                </div>
-    
-                <div class="row">
-                  <div class="ui red header">ALTO</div>
-                </div>
-                <div class="row">
-                  <div class="ui small stackable circular images">
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                  </div>  
-                </div>
-    
-                <div class="row">
-                  <div class="ui red header">TENOR</div>
-                </div>
-                <div class="row">
-                  <div class="ui small stackable circular images">
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                  </div>  
-                </div>
-    
-                <div class="row">
-                  <div class="ui red header">BASS</div>
-                </div>
-                <div class="row">
-                  <div class="ui small stackable circular images">
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                    <img class="ui image" src="assets/imgs/helen.jpg"></img>
-                  </div>  
-                </div>
+          <div class="eleven wide column">
+            <div class="ui grid">
 
+              <div class="row">
+                <div class="ui red header">VISON</div>
+                <div class="sixteen wide column">
+                  <p>The Choir outlooks to perform two major components:</p>
+                </div>
+                <ul class="ui large list">
+                  <li>help the congregation in singing for the services</li>
+                  <li>enriching the liturgy</li>
+                </ul>
+              </div>
+                
+              <div class="row">
+                <div class="ui red header">MODUS VIVENDI</div>
+                <p>The Choir works in conjunction with the Liturgy Committee with regard to selection of hymns in accordance with the liturgy of the day or feast. The Choir sings for all the major events of the Parish including but not limited to Parish festivites, Easter, Christmas & New Year.</p>
+                <p>The Choir utilizes the existing Salesian music material viz. <b>Pray Sing Hymnal,</b> in addtion to adopting various other hymns from other sources. All hymns & music used for the liturgy is in consonace and approved by the Parish Priest.</p>
+                <p>Partices & rehersals are usually held every Sunday after the evening mass in the Church hall.</p>
+              </div>
+              
             </div>
           </div>
 
