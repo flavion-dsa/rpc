@@ -174,14 +174,22 @@
     }
 
     .ui.left.floated.menu .circular.image {
-      background: rgba(255, 255, 255, 0.2)
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    a, .link.item, .footer.segment { z-index: 2; }
+    canvas{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 1;
     }
 
 
   </style>
 
   <script src="javascript/calendar.js"></script>
-
+ 
   <script>
     $(document)
       .ready(function () {
@@ -242,6 +250,8 @@
         function toTitleCase(string) {
           return string.charAt(0).toUpperCase() + string.slice(1);
         }
+
+        initSnow();
 
       })
     ;
@@ -352,6 +362,7 @@
 
   <!-- Page Contents -->
   <div class="pusher">
+    <canvas id="canvas"></canvas>
     <div class="ui inverted vertical masthead center aligned segment">
 
 
@@ -562,6 +573,8 @@
     </div>
 
   </div>
+  <script src="javascript/snow.js"></script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
