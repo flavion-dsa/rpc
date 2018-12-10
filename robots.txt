@@ -1,7 +1,9 @@
 User-agent: *
-Disallow: /data/
+Disallow: /assets/data/
 Disallow: /semantic/
 Disallow: /imports/
 Disallow: /assets/imgs/profile/
+Disallow: /assets/imgs/helen.jpg
+Disallow: /assets/imgs/map.png
 
 Sitemap: http://www.resurrectionparishchoir.gq/sitemap.xml
