@@ -1,346 +1,432 @@
 [
   {
     "hymn_no": 1,
-    "hymn_name": "Come on and celebrate"
+    "hymn_name": "Come on and celebrate",
+    "category": "Entrance"
   },
   {
     "hymn_no": 2,
-    "hymn_name": "Come and go with me"
+    "hymn_name": "Come and go with me",
+    "category": "Entrance"
   },
   {
     "hymn_no": 3,
-    "hymn_name": "As we gather"
+    "hymn_name": "As we gather",
+    "category": "Entrance"
   },
   {
     "hymn_no": 4,
-    "hymn_name": "Called to walk"
+    "hymn_name": "Called to walk",
+    "category": "Entrance"
   },
   {
     "hymn_no": 5,
-    "hymn_name": "Come bless the Lord"
+    "hymn_name": "Come bless the Lord",
+    "category": "Entrance"
   },
   {
     "hymn_no": 6,
-    "hymn_name": "Come in pilgrim"
+    "hymn_name": "Come in pilgrim",
+    "category": "Entrance"
   },
   {
     "hymn_no": 7,
-    "hymn_name": "Invitation to love"
+    "hymn_name": "Invitation to love",
+    "category": "Entrance"
   },
   {
     "hymn_no": 8,
-    "hymn_name": "Come, let us go"
+    "hymn_name": "Come, let us go",
+    "category": "Entrance"
   },
   {
     "hymn_no": 9,
-    "hymn_name": "Come, ring out your joy"
+    "hymn_name": "Come, ring out your joy",
+    "category": "Entrance"
   },
   {
     "hymn_no": 10,
-    "hymn_name": "Enter, rejoice and come in"
+    "hymn_name": "Enter, rejoice and come in",
+    "category": "Entrance"
   },
   {
     "hymn_no": 11,
-    "hymn_name": "Every morning"
+    "hymn_name": "Every morning",
+    "category": "Entrance"
   },
   {
     "hymn_no": 12,
-    "hymn_name": "Hear us, Lord, for we call"
+    "hymn_name": "Hear us, Lord, for we call",
+    "category": "Entrance"
   },
   {
     "hymn_no": 13,
-    "hymn_name": "Here we are"
+    "hymn_name": "Here we are",
+    "category": "Entrance"
   },
   {
     "hymn_no": 14,
-    "hymn_name": "How good it is to dwell"
+    "hymn_name": "How good it is to dwell",
+    "category": "Entrance"
   },
   {
     "hymn_no": 15,
-    "hymn_name": "How lovely is your"
+    "hymn_name": "How lovely is your",
+    "category": "Entrance"
   },
   {
     "hymn_no": 16,
-    "hymn_name": "God's wonderfull people"
+    "hymn_name": "God's wonderfull people",
+    "category": "Entrance"
   },
   {
     "hymn_no": 17,
-    "hymn_name": "I rejoiced when I heard"
+    "hymn_name": "I rejoiced when I heard",
+    "category": "Entrance"
   },
   {
     "hymn_no": 18,
-    "hymn_name": "I will enter His gates"
+    "hymn_name": "I will enter His gates",
+    "category": "Entrance"
   },
   {
     "hymn_no": 19,
-    "hymn_name": "I will play before the Lord"
+    "hymn_name": "I will play before the Lord",
+    "category": "Entrance"
   },
   {
     "hymn_no": 20,
-    "hymn_name": "I'll turn my steps"
+    "hymn_name": "I'll turn my steps",
+    "category": "Entrance"
   },
   {
     "hymn_no": 21,
-    "hymn_name": "Joy was in my heart"
+    "hymn_name": "Joy was in my heart",
+    "category": "Entrance"
   },
   {
     "hymn_no": 22,
-    "hymn_name": "Joyfully come"
+    "hymn_name": "Joyfully come",
+    "category": "Entrance"
   },
   {
     "hymn_no": 23,
-    "hymn_name": "Just like a child"
+    "hymn_name": "Just like a child",
+    "category": "Entrance"
   },
   {
     "hymn_no": 24,
-    "hymn_name": "Glory and praise"
+    "hymn_name": "Glory and praise",
+    "category": "Entrance"
   },
   {
     "hymn_no": 25,
-    "hymn_name": "On we go to Jerusalem"
+    "hymn_name": "On we go to Jerusalem",
+    "category": "Entrance"
   },
   {
     "hymn_no": 26,
-    "hymn_name": "Praise to Lord, almighty"
+    "hymn_name": "Praise to Lord, almighty",
+    "category": "Entrance"
   },
   {
     "hymn_no": 27,
-    "hymn_name": "Ring out your joy"
+    "hymn_name": "Ring out your joy",
+    "category": "Entrance"
   },
   {
     "hymn_no": 28,
-    "hymn_name": "Sing to the mountains"
+    "hymn_name": "Sing to the mountains",
+    "category": "Entrance"
   },
   {
     "hymn_no": 29,
-    "hymn_name": "The Lord is present in His sanctuary"
+    "hymn_name": "The Lord is present in His sanctuary",
+    "category": "Entrance"
   },
   {
     "hymn_no": 30,
-    "hymn_name": "Showers of blessing"
+    "hymn_name": "Showers of blessing",
+    "category": "Entrance"
   },
   {
     "hymn_no": 31,
-    "hymn_name": "We are climbing up"
+    "hymn_name": "We are climbing up",
+    "category": "Entrance"
   },
   {
     "hymn_no": 32,
-    "hymn_name": "We are gathering"
+    "hymn_name": "We are gathering",
+    "category": "Entrance"
   },
   {
     "hymn_no": 33,
-    "hymn_name": "We are together again"
+    "hymn_name": "We are together again",
+    "category": "Entrance"
   },
   {
     "hymn_no": 34,
-    "hymn_name": "We have come into His house"
+    "hymn_name": "We have come into His house",
+    "category": "Entrance"
   },
   {
     "hymn_no": 35,
-    "hymn_name": "What a joy"
+    "hymn_name": "What a joy",
+    "category": "Entrance"
   },
   {
     "hymn_no": 36,
-    "hymn_name": "Bless the Lord, O my soul"
+    "hymn_name": "Bless the Lord, O my soul",
+    "category": "Entrance"
   },
   {
     "hymn_no": 37,
-    "hymn_name": "Yours is the kingdom"
+    "hymn_name": "Yours is the kingdom",
+    "category": "Entrance"
   },
   {
     "hymn_no": 38,
-    "hymn_name": "All the ends of the earth"
+    "hymn_name": "All the ends of the earth",
+    "category": "Psalm"
   },
   {
     "hymn_no": 39,
-    "hymn_name": "Alleluia! All the earth rejoice"
+    "hymn_name": "Alleluia! All the earth rejoice",
+    "category": "Psalm"
   },
   {
     "hymn_no": 40,
-    "hymn_name": "Be exalted, O God"
+    "hymn_name": "Be exalted, O God",
+    "category": "Psalm"
   },
   {
     "hymn_no": 41,
-    "hymn_name": "Canticle of the young men"
+    "hymn_name": "Canticle of the young men",
+    "category": "Psalm"
   },
   {
     "hymn_no": 42,
-    "hymn_name": "Blessed are they"
+    "hymn_name": "Blessed are they",
+    "category": "Psalm"
   },
   {
     "hymn_no": 43,
-    "hymn_name": "Blest are you, the poor"
+    "hymn_name": "Blest are you, the poor",
+    "category": "Psalm"
   },
   {
     "hymn_no": 44,
-    "hymn_name": "Blest be the Lord"
+    "hymn_name": "Blest be the Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 45,
-    "hymn_name": "For You are my God"
+    "hymn_name": "For You are my God",
+    "category": "Psalm"
   },
   {
     "hymn_no": 46,
-    "hymn_name": "Glorify the Lord"
+    "hymn_name": "Glorify the Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 47,
-    "hymn_name": "Great indeed are your works"
+    "hymn_name": "Great indeed are your works",
+    "category": "Psalm"
   },
   {
     "hymn_no": 48,
-    "hymn_name": "Great is the Lord"
+    "hymn_name": "Great is the Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 49,
-    "hymn_name": "God of my salvation"
+    "hymn_name": "God of my salvation",
+    "category": "Psalm"
   },
   {
     "hymn_no": 50,
-    "hymn_name": "Have mercy on me"
+    "hymn_name": "Have mercy on me",
+    "category": "Psalm"
   },
   {
     "hymn_no": 51,
-    "hymn_name": "My soul is thirsting for the Lord"
+    "hymn_name": "My soul is thirsting for the Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 52,
-    "hymn_name": "Like a deer"
+    "hymn_name": "Like a deer",
+    "category": "Psalm"
   },
   {
     "hymn_no": 53,
-    "hymn_name": "I can feel your presence"
+    "hymn_name": "I can feel your presence",
+    "category": "Psalm"
   },
   {
     "hymn_no": 54,
-    "hymn_name": "I will never forget you"
+    "hymn_name": "I will never forget you",
+    "category": "Psalm"
   },
   {
     "hymn_no": 55,
-    "hymn_name": "If the Lord does not build"
+    "hymn_name": "If the Lord does not build",
+    "category": "Psalm"
   },
   {
     "hymn_no": 56,
-    "hymn_name": "I will awake the dawn"
+    "hymn_name": "I will awake the dawn",
+    "category": "Psalm"
   },
   {
     "hymn_no": 57,
-    "hymn_name": "In the Lord is my hope"
+    "hymn_name": "In the Lord is my hope",
+    "category": "Psalm"
   },
   {
     "hymn_no": 58,
-    "hymn_name": "It is your face Lord that I seek"
+    "hymn_name": "It is your face Lord that I seek",
+    "category": "Psalm"
   },
   {
     "hymn_no": 59,
-    "hymn_name": "Listen, let your heart keep seeking"
+    "hymn_name": "Listen, let your heart keep seeking",
+    "category": "Psalm"
   },
   {
     "hymn_no": 60,
-    "hymn_name": "Lord You know and study me"
+    "hymn_name": "Lord You know and study me",
+    "category": "Psalm"
   },
   {
     "hymn_no": 61,
-    "hymn_name": "My soul is longing"
+    "hymn_name": "My soul is longing",
+    "category": "Psalm"
   },
   {
     "hymn_no": 62,
-    "hymn_name": "O give thanks"
+    "hymn_name": "O give thanks",
+    "category": "Psalm"
   },
   {
     "hymn_no": 63,
-    "hymn_name": "O give thanks to the Lord"
+    "hymn_name": "O give thanks to the Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 64,
-    "hymn_name": "O God, my God"
+    "hymn_name": "O God, my God",
+    "category": "Psalm"
   },
   {
     "hymn_no": 65,
-    "hymn_name": "Only in God"
+    "hymn_name": "Only in God",
+    "category": "Psalm"
   },
   {
     "hymn_no": 66,
-    "hymn_name": "Our hearts were made for you"
+    "hymn_name": "Our hearts were made for you",
+    "category": "Psalm"
   },
   {
     "hymn_no": 67,
-    "hymn_name": "Praise the Lord with music"
+    "hymn_name": "Praise the Lord with music",
+    "category": "Psalm"
   },
   {
     "hymn_no": 68,
-    "hymn_name": "Kingdom song"
+    "hymn_name": "Kingdom song",
+    "category": "Psalm"
   },
   {
     "hymn_no": 69,
-    "hymn_name": "Sing a new song"
+    "hymn_name": "Sing a new song",
+    "category": "Psalm"
   },
   {
     "hymn_no": 70,
-    "hymn_name": "Taste and see"
+    "hymn_name": "Taste and see",
+    "category": "Psalm"
   },
   {
     "hymn_no": 71,
-    "hymn_name": "The law of the Lord"
+    "hymn_name": "The law of the Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 72,
-    "hymn_name": "The Lord is my sheperd"
+    "hymn_name": "The Lord is my sheperd",
+    "category": "Psalm"
   },
   {
     "hymn_no": 73,
-    "hymn_name": "The Loard is my true shepherd"
+    "hymn_name": "The Loard is my true shepherd",
+    "category": "Psalm"
   },
   {
     "hymn_no": 74,
-    "hymn_name": "The Lord is near"
+    "hymn_name": "The Lord is near",
+    "category": "Psalm"
   },
   {
     "hymn_no": 75,
-    "hymn_name": "Thou art worthy"
+    "hymn_name": "Thou art worthy",
+    "category": "Psalm"
   },
   {
     "hymn_no": 76,
-    "hymn_name": "Though the fig tree"
+    "hymn_name": "Though the fig tree",
+    "category": "Psalm"
   },
   {
     "hymn_no": 77,
-    "hymn_name": "Though the mountains may fall"
+    "hymn_name": "Though the mountains may fall",
+    "category": "Psalm"
   },
   {
     "hymn_no": 78,
-    "hymn_name": "Till the end of my days"
+    "hymn_name": "Till the end of my days",
+    "category": "Psalm"
   },
   {
     "hymn_no": 79,
-    "hymn_name": "To God in gladness sing"
+    "hymn_name": "To God in gladness sing",
+    "category": "Psalm"
   },
   {
     "hymn_no": 80,
-    "hymn_name": "Trust in the Lord"
+    "hymn_name": "Trust in the Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 81,
-    "hymn_name": "Unto Thee O Lord"
+    "hymn_name": "Unto Thee O Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 82,
-    "hymn_name": "What thanks O Lord"
+    "hymn_name": "What thanks O Lord",
+    "category": "Psalm"
   },
   {
     "hymn_no": 83,
-    "hymn_name": "You are near"
+    "hymn_name": "You are near",
+    "category": "Psalm"
   },
   {
     "hymn_no": 84,
-    "hymn_name": "Alle, alle, alleluia"
+    "hymn_name": "Alle, alle, alleluia",
+    "category": "Psalm"
   },
   {
     "hymn_no": 85,
-    "hymn_name": "Allelu! Everybody sing allelu"
+    "hymn_name": "Allelu! Everybody sing allelu",
+    "category": "Psalm"
   },
   {
     "hymn_no": 86,
-    "hymn_name": "Give thanks to risen lord"
+    "hymn_name": "Give thanks to risen lord",
+    "category": "Psalm"
   }
 ]

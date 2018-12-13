@@ -132,19 +132,10 @@
         display: block;
       }
       
+      .hymnal.image {
+        display: none;
+      }
     }
-
-    .ui.inverted.masthead.segment {
-     
-      background-blend-mode: soft-light;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-    .ui.red.header, .ui.circular.images {
-      visibility: hidden;
-    }
-
 
   </style>
 
@@ -188,9 +179,9 @@
         var limit = per_page;
 
         loadJSON(function (response) {
-          result = JSON.parse(response);  
+          result = JSON.parse(response);
           max_size = result.length;
-          
+         
           paginate(start, limit);
           pageSearch(result);
         });
@@ -209,15 +200,21 @@
         function pageSearch(content) {
           $('.ui.search')
             .search({
+              type: 'category',
               source: content,
               fields: {
                 title: 'hymn_name',
+                description: 'hymn_name',
               },
-              searchFields: [
-                'hymn_no', 'hymn_name'
-              ],
-              fullTextSearch: false
+              searchFields: ['hymn_name'],
+              minCharacters: 3,
+              maxResults: 5,
+              fullTextSearch: false,
+              onSelect: function(result, response) {
+                window.location.href = 'hymns/lyrics?hymn=hymn_'+result.hymn_no;
+              }
             })
+            
           ;
         }
 
@@ -389,7 +386,25 @@
 
     <div class="ui vertical stripe segment">
       <div class="ui stackable grid container">
-        <div class="right floated thirteen wide column">
+        <div class="four wide column">
+          <div class="hymnal image">
+      
+            <div class="ui fluid card">
+              <div class="image">
+                <img src="http://tejonline.com/wp-content/uploads/2015/02/Pray-Sing-Hymnal-450x633.jpg">
+              </div>
+              <div class="content">
+                <h3 class="ui header">Pray Sing Hymnal</h3>
+                <div class="description">
+                  <h2>&#8377;110</h2>
+                  (These rates are applicable in India only)
+                </div>
+              </div>
+              <a class="ui bottom attached red button" href="http://tejonline.com/shop/pray-sing-hymnal/">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="ten wide column">
           <div class="ui blue search">
             <div class="ui icon input">
               <input class="prompt" type="text" placeholder="Search hymn">
