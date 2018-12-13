@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /assets/data/
 Disallow: /semantic/
 Disallow: /imports/
+Disallow: /hymns/
 Disallow: /assets/imgs/profile/
 Disallow: /assets/imgs/helen.jpg
 Disallow: /assets/imgs/map.png
