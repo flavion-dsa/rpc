@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Standard Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+
+  <!-- Additional Meta -->
+  <meta name="description" content="The Resurrection Parish Choir aims at enriching the liturgical services held in the Parish. They sing at the Parish Mass, feasts and liturgies.">
+  <meta name="keywords" content="resurrection parish choir, choir, don bosco virar, resurrection church virar">
+
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.min.js"></script>
+
+  <!-- Site Properties -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Audio | Resurrection Parish Choir</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative|Montserrat' rel='stylesheet'>
+
+  <style type="text/css">
+  
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 240px;
+      padding: 1em 0em;
+    }
+
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+
+    .masthead h1.ui.header {
+      margin-top: 1.5em;
+      margin-bottom: 0em;
+      font-size: 3.5em;
+      font-weight: normal;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+
+    .ui.vertical.stripe .button+h3,
+    .ui.vertical.stripe p+h3 {
+      margin-top: 3em;
+    }
+
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    .mob.item {
+        display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu,
+      .secondary.pointing.mob.menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 200px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 3em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+
+      .ui.vertical.stripe {
+        padding: 3em 0em;
+      }
+
+      .mob.item {
+        display: block;
+      }
+      
+    }
+
+    .ui.inverted.masthead.segment {
+     
+      background-blend-mode: soft-light;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+  </style>
+  
+  <script>
+    $(document)
+      .ready(function () {
+
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function () {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function () {
+              $('.fixed.menu').transition('fade out');
+            }
+          })
+        ;
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item')
+        ;
+
+        $('.ui.dropdown')
+          .dropdown({on: 'hover'})
+        ;
+
+        $('.ui.accordion')
+          .accordion()
+        ;
+
+      })
+    ;
+
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130195533-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-130195533-1');
+  </script>
+  
+</head>
+
+<body>
+
+  <div class="ui borderless large top fixed hidden menu">
+    <div class="ui right fitted item"
+      style="margin-right: 9em;">
+      <a class="item" href="../">Home</a>
+      <div class="ui dropdown link item">
+        About
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="history">Mission & History</a>
+          <a class="item" href="choir">The Choir</a>
+          <a class="item" href="members">The Members</a>
+        </div>
+      </div>
+      <a class="item" href="gallery">Gallery</a>
+      <a class="item">Media</a>
+    </div>
+  </div>
+
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    <div class="ui vertical inverted accordion">
+      <div class="item">
+        <a class="title" href="../">Home</a>
+      </div>
+      <div class="active item">
+        <div class="title">
+          About
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+          <div class="menu">
+            <a class="item" href="history">Mission & History</a>
+            <a class="item" href="choir">The Choir</a>
+            <a class="item" href="members">The Members</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <a class="title" href="gallery">Gallery</a>
+      </div>
+      <div class="item">
+        <div class="title">
+          Media
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+          <div class="menu">
+            <a class="item" href="pray-sing">Hymnal</a>
+            <div class="item">MP3</div>
+            <div class="item">Video</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Page Contents -->
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment">
+
+      <div class="ui container">
+        <div class="ui large inverted right floated secondary pointing menu">
+
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
+          
+          <a class="item" href="../">Home</a>
+          <div class="ui dropdown link item">
+            About
+            <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item" href="history">Mission & History</a>
+              <a class="item" href="choir">The Choir</a>
+              <a class="item" href="members">The Members</a>
+            </div>
+          </div>
+
+          <a class="item" href="gallery">Gallery</a>
+          <div class="menu">
+            <div class="ui dropdown link item">
+              Media
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <a class="item" href="pray-sing">Hymnal</a>
+                <div class="item">MP3</div>
+                <div class="item">Video</div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="ui text container">
+        <h1 class="ui inverted header">
+          Audio
+        </h1>
+      </div>
+
+    </div>
+
+    <div class="ui vertical stripe segment">
+      <div class="ui stackable two column grid container">
+
+        <div class="four wide column">
+        </div>
+
+        <div class="nine wide column">
+          <div id="player"></div>
+          <table class="ui basic table">
+            <tr>
+              <td><h2 class="ui red header" data-video="vtxSQaJEhoM">Unto us</h2></td>
+              <td class="center aligned"></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted equal height stackable grid">
+          <div class="six wide column">
+            <h4 class="ui inverted header">GET IN TOUCH</h4>
+            <div class="ui inverted list">
+              <li class="item">Email: resurrectionparishchoir[at]gmail.com</li>
+              <li class="item">Phone:</li>
+            </div>
+            <h4 class="ui inverted header">FOLLOW US ON</h4>
+            <div class="ui container">
+             <!--  <a class="ui large inverted circular icon button" href="mailto:resurrectionparishchoir@gmail.com">
+                <i class="envelope outline icon"></i>
+              </a> -->
+              <a class="ui large inverted circular icon button" href="https://www.facebook.com/Resurrection-Parish-Choir-390749221437123">
+                <i class="facebook f icon"></i>
+              </a>
+              <a class="ui large inverted circular icon button" href="https://instagram.com/resurrectionparishchoir">
+                <i class="instagram icon"></i>
+              </a>
+              <a class="ui large inverted circular icon button">
+                <i class="youtube icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="five wide column">
+              <h4 class="ui inverted header">QUICK LINKS</h4>
+              <div class="ui inverted link list">
+                  <a href="#" class="item">Sitemap</a>
+                  <a href="history" class="item">About</a>
+                  <a href="#" class="item">Contact Us</a>
+                  <a href="#" class="item">Religious Ceremonies</a>
+                
+              </div>
+          </div>
+
+          <div class="five wide column">
+            <h4 class="ui inverted header">LOCATION</h4>
+            <div class="ui two column grid">
+              <div class="column">
+                <img class="ui small image" src="assets/imgs/map.png">
+              </div>
+              <div class="column">
+                <div class="ui inverted list">
+                <li class="item">Don Bosco Church,</li>
+                <li class="item">Manvelpada Rd,</li>
+                <li class="item">Virar (E),</li>
+                <li class="item">401305</li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="ui inverted header">
+          COPYRIGHT © 2018 | ALL RIGHTS RESERVED
+          <div class="sub header">Designed & Developed by Flavion D'sa</div>
+        </h5>
+        
+      </div>
+    </div>
+
+  </div>
+  <script src="javascript/youtube.js"></script>
+</body>
+
+</html>
