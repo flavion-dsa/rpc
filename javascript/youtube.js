@@ -21,8 +21,8 @@ icon.onclick = function () {
   }
 };
 
-$('table')
-  .delegate('h2', 'click', function () {
+$('.cards')
+  .delegate('.header', 'click', function () {
     var videoId = $(this).attr('data-video');
     player.stopVideo();
     player.cueVideoById(videoId);
