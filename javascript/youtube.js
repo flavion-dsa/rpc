@@ -26,7 +26,7 @@ $('.cards')
     var videoId = $(this).attr('data-video');
     player.stopVideo();
     player.cueVideoById(videoId);
-    toggleButton(player.getPlayerState() == YT.PlayerState.CUED);
+    toggleButton(false);
     $(this).parent().siblings().last().append(icon);
   })
 ;
@@ -51,7 +51,9 @@ function onYouTubeIframeAPIReady() {
       autoplay: 0,
       fs: 0,
       rel: 0,
-      modestbranding: 1
+      enablejsapi: 1,
+      modestbranding: 1,
+      origin: 'http://www.resurrectionparishchoir.gq'
     },
     events: {
       'onReady': onPlayerReady,
@@ -70,11 +72,10 @@ function onPlayerReady(event) {
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-var done = false;
+
 function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
+  if (event.data == YT.PlayerState.ENDED) {
+    toggleButton(false);
   }
 }
 function stopVideo() {
