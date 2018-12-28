@@ -9,6 +9,7 @@ var progress = document.createElement('div');
 progress.setAttribute('class', 'ui tiny red progress')
 progress.style.cssText = 'cursor:pointer; cursor:hand'
 progress.append(progressBar);
+$(progress).progress({precision: 4, total: 100});
 
 var meta = document.createElement('div');
 meta.setAttribute('class', 'meta');
@@ -45,6 +46,7 @@ $('.cards')
     $('.ui.blue.header').removeClass('ui blue');
     $(this).addClass('ui blue');
 
+    $(progress).progress('remove success');
     toggleButton(false);
     $(this).parent().siblings().last().append(icon);
     $(this).parent().children().last().append(progress);
@@ -85,9 +87,9 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-  //event.target.playVideo();
-  player.setPlaybackQuality('small');
-  toggleButton(player.getPlayerState() !== YT.PlayerState.CUED);
+  event.target.setVolume(100);
+  event.target.setPlaybackQuality('small');
+  toggleButton(false);
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -96,12 +98,14 @@ function onPlayerReady(event) {
 var playerTicks;
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
-    toggleButton(false);
+    icon.removeAttribute('class');
+    icon.setAttribute('class', 'large undo icon')
+    $(progress).progress('set error');
   }
   if (event.data == YT.PlayerState.PLAYING) {
     $(metaTotal).text(" / "+secondsToClock(player.getDuration()));
     playerTicks = setInterval(function () {
-      $(progress).progress({percent: getCurrentProgress()});
+      $(progress).progress('set progress', getCurrentProgress());
       $(metaElapsed).text(secondsToClock(player.getCurrentTime()));
     }, 1000);
   } else if (event.data == YT.PlayerState.CUED) {
