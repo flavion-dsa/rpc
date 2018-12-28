@@ -3,6 +3,21 @@ var icon = document.createElement('i');
 icon.setAttribute('class', 'circle icon');
 icon.style.cssText = 'cursor:pointer; cursor:hand';
 
+var progressBar = document.createElement('div');
+progressBar.setAttribute('class', 'bar');
+var progress = document.createElement('div');
+progress.setAttribute('class', 'ui tiny red progress')
+progress.style.cssText = 'cursor:pointer; cursor:hand'
+progress.append(progressBar);
+
+var meta = document.createElement('div');
+meta.setAttribute('class', 'meta');
+metaElapsed = document.createElement('div');
+metaTotal = document.createElement('div');
+meta.append(metaElapsed);
+meta.append(metaTotal);
+
+
 var toggleButton = function (play) {
   var state = play ? 'large pause icon' : 'large play icon';
   icon.removeAttribute('class');
@@ -26,8 +41,14 @@ $('.cards')
     var videoId = $(this).attr('data-video');
     player.stopVideo();
     player.cueVideoById(videoId);
+    
+    $('.ui.blue.header').removeClass('ui blue');
+    $(this).addClass('ui blue');
+
     toggleButton(false);
     $(this).parent().siblings().last().append(icon);
+    $(this).parent().children().last().append(progress);
+    $(this).after(meta);
   })
 ;
 
@@ -72,12 +93,42 @@ function onPlayerReady(event) {
 // 5. The API calls this function when the player's state changes.
 //    The function indicates that when playing a video (state=1),
 //    the player should play for six seconds and then stop.
-
+var playerTicks;
 function onPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
     toggleButton(false);
   }
+  if (event.data == YT.PlayerState.PLAYING) {
+    $(metaTotal).text(" / "+secondsToClock(player.getDuration()));
+    playerTicks = setInterval(function () {
+      $(progress).progress({percent: getCurrentProgress()});
+      $(metaElapsed).text(secondsToClock(player.getCurrentTime()));
+    }, 1000);
+  } else if (event.data == YT.PlayerState.CUED) {
+    $(progress).progress('reset');
+    $(metaElapsed).text("00:00");
+    $(metaTotal).text(" / 00:00");
+  } else {
+    clearTimeout(playerTicks);
+  }
 }
+
 function stopVideo() {
   player.stopVideo();
+}
+
+function getCurrentProgress() {
+  var playerTotalDuration = player.getDuration();
+  var playerCurrentTime = player.getCurrentTime();
+  return (playerCurrentTime/playerTotalDuration)*100;
+}
+
+function secondsToClock(duration) {
+    var rawTime = Math.floor(duration);
+    var min = Math.floor(rawTime % 3600 / 60);
+    var sec = Math.floor(rawTime % 3600 % 60);
+    
+    var minDisplay = min < 10 ? "0"+min : ""+min;
+    var secDisplay = sec < 10 ? "0"+sec : ""+sec;
+    return minDisplay+":"+secDisplay;
 }
