@@ -181,6 +181,15 @@
           .accordion()
         ;
 
+        $('.ui.selection.dropdown')
+          .dropdown({
+            on: 'click',
+            onChange: function (value, text, $selectedItem) {
+              createCardList(result, text);
+            }
+          })
+        ;
+
       })
     ;
 
@@ -309,39 +318,20 @@
       <div class="ui stackable two column grid container">
 
         <div class="four wide column">
+          <div class="ui form">
+            <div class="field">
+              <select class="ui selection dropdown" id="event-select">
+                  <option value="C18">Christmas 2018</option>
+                  <option value="G18">Good Friday 2018</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div class="nine wide column">
           
-          <div class="ui two stackable cards">
-            <div class="card">
-              <div class="content">
-                <a class="header" data-video="vtxSQaJEhoM">Unto us</a>
-                <div class="description"></div>
-              </div>
-              <div class="ui bottom attached center aligned inverted segment"></div>
-            </div>
-            <div class="card">
-              <div class="content">
-                <a class="header" data-video="5ZIMIApN2Kg">When a Child is born</a>
-                <div class="description"></div>
-              </div>
-              <div class="ui bottom attached center aligned inverted segment"></div>
-            </div>
-            <div class="card">
-              <div class="content">
-                <a class="header" data-video="ZVsCqWLFLvs">This is Christmas</a>
-                <div class="description"></div>
-              </div>
-              <div class="ui bottom attached center aligned inverted segment"></div>
-            </div>
-            <div class="card">
-              <div class="content">
-                <a class="header" data-video="Q1tfz5uBlBQ">Joyful Joyful</a>
-                <div class="description"></div>
-              </div>
-              <div class="ui bottom attached center aligned inverted segment"></div>
-            </div>
+          <div class="ui two stackable cards" id="m-cards">
+            
           </div>
 
         </div>
@@ -412,7 +402,7 @@
     </div>
 
   </div>
-  <script src="javascript/youtube.js"></script>
+  <script src="javascript/audio.js"></script>
 </body>
 
 </html>

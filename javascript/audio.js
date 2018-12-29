@@ -37,6 +37,14 @@ icon.onclick = function () {
   }
 };
 
+var result;
+var defaultText = $('#event-select option:selected').text();
+var cards = $('#m-cards');
+loadJSON(function (response) {
+  result = JSON.parse(response);
+  createCardList(result, defaultText);
+});
+
 $('.cards')
   .delegate('.header', 'click', function () {
     var videoId = $(this).attr('data-video');
@@ -135,4 +143,33 @@ function secondsToClock(duration) {
     var minDisplay = min < 10 ? "0"+min : ""+min;
     var secDisplay = sec < 10 ? "0"+sec : ""+sec;
     return minDisplay+":"+secDisplay;
+}
+
+function loadJSON(callback) {
+  var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("application/json");
+  xobj.open('GET', 'assets/data/audio.json', true);
+  xobj.onreadystatechange = function() {
+    if (xobj.readyState == 4 && xobj.status == "200") {
+      callback(xobj.responseText);
+    }
+  };
+  xobj.send(null);
+}
+
+function createCardList(array, text) {
+  for (x in array) {
+    if (array[x].event == text) {
+      cards.empty();
+      for (var i=0; i<array[x].links.length; i++) {
+        var song = array[x].links[i];
+        var card = createCard(song.title, song.code);
+        cards.append(card);
+      }
+    }
+  }
+}
+
+function createCard(title, code) {
+  return "<div class=\"card\"><div class=\"content\"><a class=\"header\" data-video=\""+code+"\">"+title+"</a><div class=\"description\"></div></div><div class=\"ui bottom attached center aligned inverted segment\"></div></div>"
 }
