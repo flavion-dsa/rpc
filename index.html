@@ -114,6 +114,11 @@
       display: none;
     }
 
+    .parallax-window {
+      min-height: 432px;
+      background: transparent;
+    }
+
     @media only screen and (max-width: 700px) {
       .ui.fixed.menu {
         display: none !important;
@@ -137,14 +142,15 @@
         margin-top: 0.5em;
         font-size: 1.5em;
       }
-
-      .vertical.stripe.banner.segment {
-        min-height: 300px;
-      }
-
+ 
       .ui.vertical.quote h1.ui.quote.header {
         margin-top: 0em;
         font-size: 2.33em;
+      }
+
+      .parallax-window {
+        min-height: 240px;
+        background: transparent;
       }
 
     }
@@ -157,39 +163,14 @@
       background-position: center;
     }
 
-    .banner.segment {
-      min-height: 432px;
-    }
-
-    .vertical.stripe.banner.segment {
-      background-blend-mode: overlay;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-    }
-    #banner-2 {
-      background-image: url('assets/imgs/banner_2.jpg');
-    }
-    #banner-3 {
-      background-image: url('assets/imgs/banner_3.jpg');
-    }
-
     .ui.left.floated.menu .circular.image {
       background: rgba(255, 255, 255, 0.2);
     }
 
-    a, .link.item, .footer.segment { z-index: 2; }
-    canvas{
-        position: fixed;
-        top:0;
-        left:0;
-        z-index: 1;
-    }
-
-
   </style>
 
   <script src="javascript/calendar.js"></script>
+  <script src="javascript/parallax.min.js"></script>
  
   <script>
     $(document)
@@ -251,8 +232,6 @@
         function toTitleCase(string) {
           return string.charAt(0).toUpperCase() + string.slice(1);
         }
-
-        initSnow();
 
       })
     ;
@@ -363,9 +342,7 @@
 
   <!-- Page Contents -->
   <div class="pusher">
-    <canvas id="canvas"></canvas>
     <div class="ui inverted vertical masthead center aligned segment">
-
 
       <div class="ui container">
         <!-- <div class="ui large inverted left floated secondary menu">
@@ -449,8 +426,8 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe banner segment" id="banner-2"></div>
-
+    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_2.jpg" data-z-index="3"></div>
+    
     <div class="ui vertical stripe secondary segment">
       <div class="ui two column center aligned very relaxed stackable grid container">
         <h3 class="ui teal header" style="margin-bottom:1.33em">Liturgical Calendar</h3>
@@ -490,7 +467,7 @@
       </div>
     </div>
 
-    <div class="ui vertical stripe banner segment" id="banner-3"></div>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_3.jpg" data-z-index="3"></div>
 
     <div class="ui vertical quote segment">
       <div class="ui stackable equal height grid container">
@@ -574,8 +551,7 @@
     </div>
 
   </div>
-  <script src="javascript/snow.js"></script>
-
+ 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
