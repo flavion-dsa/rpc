@@ -173,7 +173,7 @@
         var result = null;
         loadLyricsJSON(function(response) {
           result = JSON.parse(response);
-          console.log(result);
+         
           $('#page-title').append(result.hymn_title);
           $('#hymn-title').append(result.hymn_title);
           $('#hymn-lyrics').append(result.lyrics);
