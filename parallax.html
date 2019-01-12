@@ -1,32 +1,413 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=500" />
-  <meta name="author" content="" />
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <title>Parallax</title>
+<html lang="en">
 
-  <link href="semantic/dist/semantic.min.css" rel="stylesheet">
+<head>
+  <!-- Standard Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+  <meta name="google-site-verification" content="nICnvhO3tP-NPcQ4Wl2iG3Ax-9KcqbrbxJLneRWXK1U" />
+
+  <!-- Additional Meta -->
+  <meta name="description" content="The Resurrection Parish Choir aims at enriching the liturgical services held in the Parish. They sing at the Parish Mass, feasts and liturgies.">
+  <meta name="keywords" content="resurrection parish choir, choir, don bosco virar, resurrection church virar">
+  
+  <!-- Facebook Meta -->
+  <meta property="fb:app_id" content="261517077851121">
+  <meta property="og:url" content="http://www.resurrectionparishchoir.gq">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Resurrection Parish Choir">
+  <meta property="og:title" content="Resurrection Parish Choir">
+  <meta property="og:image" content="http://www.resurrectionparishchoir.gq/assets/imgs/banner_3.jpg">
+  <meta property="og:description" content="The official website for Resurrection Parish Choir">
+
+  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <style>
-    .parallax-window {
-        min-height: 720px;
-        background: transparent;
+  <script src="semantic/dist/semantic.min.js"></script>
+
+  <!-- Site Properties -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Resurrection Parish Choir</title>
+ 
+  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative|Montserrat' rel='stylesheet'>
+
+  <link rel="stylesheet" type="text/css" href="stylesheet/home.css">
+
+  <script src="javascript/calendar.js"></script>
+  <script src="javascript/parallax.min.js"></script>
+ 
+  <script>
+    $(document)
+      .ready(function () {
+
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function () {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function () {
+              $('.fixed.menu').transition('fade out');
+            }
+          })
+        ;
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item')
+        ;
+
+        $('.ui.dropdown')
+          .dropdown({on: 'hover'})
+        ;
+
+        $('.ui.accordion')
+          .accordion()
+        ;
+
+        getCountdown();
+        fetchTodaysData(function (response) {
+          var todays_feast = JSON.parse(response);
+          
+          $('#feast-season').append(toTitleCase(todays_feast.season)+" Season");
+          $('#feast-title').append(todays_feast.celebrations[0].title);
+          var m_color = todays_feast.celebrations[0].colour;
+  
+          if (m_color != 'white') {
+            $('#feast-color').addClass('tertiary inverted '+m_color);
+          }
+        });
+
+        function getCountdown () {
+          var countdown_date = new Date("Mar 6, 2019 00:00:00").getTime();
+          var interval = setInterval(function () {
+            var now = new Date().getTime();
+            var time_left = countdown_date - now;
+            
+            var CONST = 1000*60;
+            $('#days-left').html(Math.floor(time_left/(CONST*60*24)));
+            $('#hrs-left').html(Math.floor((time_left%(CONST*60*24))/(CONST*60)));
+            $('#min-left').html(Math.floor((time_left%(CONST*60))/(CONST)));
+            $('#sec-left').html(Math.floor((time_left%(CONST))/1000));  
+          }, 1000);
+        }
+
+        function toTitleCase(string) {
+          return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+      })
+    ;
+
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Resurrection Parish Choir",
+      "url": "http://www.resurrectionparishchoir.gq",
+      "sameAs": [
+        "https://www.facebook.com/Resurrection-Parish-Choir-390749221437123",
+        "https://instagram.com/resurrectionparishchoir"
+      ],
+      "logo": "http://www.resurrectionparishchoir.gq/assets/imgs/choir_logo.png",
+      "email": "resurrectionparishchoir(at)gmail.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Fr. Blany Pinto, SDB"
+      },
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Resurrection Church"
+      }
     }
-  </style>
+  </script>
+
 </head>
 
 <body>
-  <div class="pusher">
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner.jpg"></div>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_2.jpg"></div>
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_3.jpg"></div>
+    <div class="ui borderless large top fixed hidden menu">
+      <div class="ui right fitted item"
+        style="margin-right: 9em;">
+        <a class="item">Home</a>
+        <div class="ui dropdown link item">
+          About
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="history">Mission & History</a>
+            <a class="item" href="choir">The Choir</a>
+            <a class="item" href="members">The Members</a>
+          </div>
+        </div>
+        <a class="item" href="gallery">Gallery</a>
+        <div class="ui dropdown link item">
+          Media
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="pray-sing">Hymnal</a>
+            <a class="item" href="audio">MP3</a>
+            <a class="item">Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    <div class="ui vertical inverted accordion">
+      <div class="active item">
+        <div class="title">Home</div>
+      </div>
+      <div class="item">
+        <div class="title">
+          About
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+          <div class="menu">
+            <a class="item" href="history">Mission & History</a>
+            <a class="item" href="choir">The Choir</a>
+            <a class="item" href="members">The Members</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <a class="title" href="gallery">Gallery</a>
+      </div>
+      <div class="item">
+        <div class="title">
+          Media
+          <i class="dropdown icon"></i>
+        </div>
+        <div class="content">
+          <div class="menu">
+            <a class="item" href="pray-sing">Hymnal</a>
+            <a class="item" href="audio">MP3</a>
+            <a class="item">Video</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <script src="javascript/parallax.min.js"></script>
+
+
+  <!-- Page Contents -->
+  <div class="pusher">
+    <div class="full height">
+      <div class="following bar">
+        <div class="ui container">
+          <!-- <div class="ui large inverted left floated secondary menu">
+            <div class="item">
+              <img class="ui small circular image" alt="Logo" src="assets/imgs/err.png">
+            </div>
+          </div> -->
+          <div class="ui large inverted right floated secondary pointing menu">
+            
+            <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+            
+            <a class="active item">Home</a>
+  
+            <div class="ui dropdown link item">
+              About
+              <i class="dropdown icon"></i>
+              <div class="menu">
+                <a class="item" href="history">Mission & History</a>
+                <a class="item" href="choir">The Choir</a>
+                <a class="item" href="members">The Members</a>
+              </div>
+            </div>
+  
+            <a class="item" href="gallery">Gallery</a>
+            <div class="menu">
+              <div class="ui dropdown link item">
+                Media
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                  <a class="item" href="pray-sing">Hymnal</a>
+                  <a class="item" href="audio">MP3</a>
+                  <a class="item">Video</a>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="zoomed masthead segment">
+        <div class="ui text container">
+          <h1 class="ui inverted header">
+            RESURRECTION PARISH CHOIR
+          </h1>
+        </div>
+      </div>
+  
+      <div class="ui vertical stripe segment">
+        <div class="ui three column center aligned divided very relaxed stackable grid container">
+          <div class="row">
+            <h3 class="ui huge teal header">News & Events</h3>
+          </div>
+          <div class="row">
+            <div class="news column">
+              <div class="ui large header">Feast of Christ the King</div>
+              <p>The Resurrection Parish Choir celebrated the feast of Christ the King on 25th of November.</p>
+              <button class="ui secondary basic animated button">
+                <div class="ui visible content">Read more</div>
+                <div class="hidden content"><i class="right arrow icon"></i></div>
+              </button>
+            </div>
+            <div class="news column">
+              <div class="ui large header">Feast of Assumption</div>
+              <p>The Resurrection Parish Choir celebrated the feast of Assumption of Our Lady on 15th of August.</p>
+              <button class="ui secondary basic animated button">
+                <div class="ui visible content">Read more</div>
+                <div class="hidden content"><i class="right arrow icon"></i></div>
+              </button>
+            </div>
+            <div class="news column">
+              <div class="ui large header">Launch of Logo</div>
+              <p>The Resurrection Parish Choir lauched their logo on the solemnity of Christ the King.</p>
+              <button class="ui secondary basic animated button">
+                <div class="ui visible content">Read more</div>
+                <div class="hidden content"><i class="right arrow icon"></i></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_2.jpg" data-z-index="3"></div>
+      
+      <div class="ui vertical stripe secondary segment">
+        <div class="ui two column center aligned very relaxed stackable grid container">
+          <h3 class="ui teal header" style="margin-bottom:1.33em">Liturgical Calendar</h3>
+          <div class="row">
+            <div class="column" style="display: flex">
+              <div class="ui segment" id="feast-color">
+                <h2 id="feast-season"></h2>
+                <h2 class="ui header" id="feast-title"></h2>
+              </div>
+            </div>
+  
+            <div class="column">
+              <div class="ui inverted grey segment">
+                <div class="ui four small inverted statistics">
+                  <div class="statistic">
+                    <div class="value" id="days-left">0</div>
+                    <div class="label">Days</div>
+                  </div>
+                  <div class="statistic">
+                    <div class="value" id="hrs-left">0</div>
+                    <div class="label">Hours</div>
+                  </div>
+                  <div class="statistic">
+                    <div class="value" id="min-left">0</div>
+                    <div class="label">Minutes</div>
+                  </div>
+                  <div class="statistic">
+                    <div class="value" id="sec-left">0</div>
+                    <div class="label">Seconds</div>
+                  </div>
+                </div>
+                <h2 class="ui header">UNTIL ASH WEDNESDAY</h2>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+  
+      <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_3.jpg" data-z-index="3"></div>
+  
+      <div class="ui vertical quote segment">
+        <div class="ui stackable equal height grid container">
+          <div class="row">
+            <div class="left floated column">
+              <i class="grey big quote left icon"></i>
+            </div>
+            <div class="fourteen wide column">
+              <h1 class="ui quote center aligned teal header">
+                He Who Sings Well, Prays Twice
+              </h1>
+            </div>
+            <div class="right aligned column">    
+              <i class="grey big quote right icon"></i>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+ 
+    <div class="ui inverted vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable inverted equal height stackable grid">
+          <div class="six wide column">
+            <h4 class="ui inverted header">GET IN TOUCH</h4>
+            <div class="ui inverted list">
+              <li class="item">Email: resurrectionparishchoir[at]gmail.com</li>
+              <li class="item">Phone:</li>
+            </div>
+            <h4 class="ui inverted header">FOLLOW US ON</h4>
+            <div class="ui container">
+             <!--  <a class="ui large inverted circular icon button" href="mailto:resurrectionparishchoir@gmail.com">
+                <i class="envelope outline icon"></i>
+              </a> -->
+              <a class="ui large inverted circular icon button" href="https://www.facebook.com/Resurrection-Parish-Choir-390749221437123">
+                <i class="facebook f icon"></i>
+              </a>
+              <a class="ui large inverted circular icon button" href="https://instagram.com/resurrectionparishchoir">
+                <i class="instagram icon"></i>
+              </a>
+              <a class="ui large inverted circular icon button">
+                <i class="youtube icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="five wide column">
+              <h4 class="ui inverted header">QUICK LINKS</h4>
+              <div class="ui inverted link list">
+                  <a href="#" class="item">Sitemap</a>
+                  <a href="history" class="item">About</a>
+                  <a href="#" class="item">Contact Us</a>
+                  <a href="#" class="item">Religious Ceremonies</a>
+                
+              </div>
+          </div>
+
+          <div class="five wide column">
+            <h4 class="ui inverted header">LOCATION</h4>
+            <div class="ui two column grid">
+              <div class="column">
+                <img class="ui small image" alt="Map" src="assets/imgs/map.png">
+              </div>
+              <div class="column">
+                <div class="ui inverted list">
+                <li class="item">Don Bosco Church,</li>
+                <li class="item">Manvelpada Rd,</li>
+                <li class="item">Virar (E),</li>
+                <li class="item">401305</li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="ui inverted header">
+          COPYRIGHT © 2018 | ALL RIGHTS RESERVED
+          <div class="sub header">Designed & Developed by Flavion D'sa</div>
+        </h5>
+        
+      </div>
+    </div>
+
+  </div>
+ 
 </body>
+
 </html>
