@@ -1,236 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Standard Meta -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
 
-  <!-- Additional Meta -->
-  <meta name="description" content="The Resurrection Parish Choir aims at enriching the liturgical services held in the Parish. They sing at the Parish Mass, feasts and liturgies.">
-  <meta name="keywords" content="resurrection parish choir, choir, don bosco virar, resurrection church virar">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="semantic/dist/semantic.min.js"></script>
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-  <link rel="manifest" href="icons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Site Properties -->
   <title>Gallery | Resurrection Parish Choir</title>
 
-  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative|Montserrat' rel='stylesheet'>
+  <link rel="manifest" href="/manifest.json">
 
-  <style type="text/css">
-  
-    .hidden.menu {
-      display: none;
-    }
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-    .masthead.segment {
-      min-height: 240px;
-      padding: 1em 0em;
-    }
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 
-    .masthead .logo.item img {
-      margin-right: 1em;
-    }
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
-    .masthead .ui.menu .ui.button {
-      margin-left: 0.5em;
-    }
-
-    .masthead h1.ui.header {
-      margin-top: 1.5em;
-      margin-bottom: 0em;
-      font-size: 3.5em;
-      font-weight: normal;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .masthead h2 {
-      font-size: 1.7em;
-      font-weight: normal;
-    }
-
-    .ui.vertical.stripe {
-      padding: 8em 0em;
-    }
-
-    .ui.vertical.stripe h3 {
-      font-size: 2em;
-    }
-
-    .ui.vertical.stripe .button+h3,
-    .ui.vertical.stripe p+h3 {
-      margin-top: 3em;
-    }
-
-    .ui.vertical.stripe .floated.image {
-      clear: both;
-    }
-
-    .ui.vertical.stripe p {
-      font-size: 1.33em;
-    }
-
-    .ui.vertical.stripe .horizontal.divider {
-      margin: 3em 0em;
-    }
-
-    .quote.stripe.segment {
-      padding: 0em;
-    }
-
-    .quote.stripe.segment .grid .column {
-      padding-top: 5em;
-      padding-bottom: 5em;
-    }
-
-    .footer.segment {
-      padding: 5em 0em;
-    }
-
-    .secondary.pointing.menu .toc.item {
-      display: none;
-    }
-
-    .mob.item {
-        display: none;
-    }
-
-    @media only screen and (max-width: 700px) {
-      .ui.fixed.menu {
-        display: none !important;
-      }
-
-      .secondary.pointing.menu .item,
-      .secondary.pointing.menu .menu,
-      .secondary.pointing.mob.menu {
-        display: none;
-      }
-      .secondary.pointing.menu .toc.item {
-        display: block;
-      }
-      .masthead.segment {
-        min-height: 200px;
-      }
-      .masthead h1.ui.header {
-        font-size: 2em;
-        margin-top: 3em;
-      }
-      .masthead h2 {
-        margin-top: 0.5em;
-        font-size: 1.5em;
-      }
-
-      .ui.vertical.stripe {
-        padding: 3em 0em;
-      }
-
-      .mob.item {
-        display: block;
-      }
-      
-    }
-
-    .ui.inverted.masthead.segment {
-     
-      background-blend-mode: soft-light;
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-    .ui.red.header, .ui.circular.images {
-      visibility: hidden;
-    }
-
-
-	</style>
-	
-	<script src="javascript/gallery.js"></script>
-  
-  <script>
-    $(document)
-      .ready(function () {
-
-        // fix menu when passed
-        $('.masthead')
-          .visibility({
-            once: false,
-            onBottomPassed: function () {
-              $('.fixed.menu').transition('fade in');
-            },
-            onBottomPassedReverse: function () {
-              $('.fixed.menu').transition('fade out');
-            }
-          })
-        ;
-
-        // create sidebar and attach to menu open
-        $('.ui.sidebar')
-          .sidebar('attach events', '.toc.item')
-        ;
-
-        $('.ui.dropdown')
-          .dropdown({on: 'hover'})
-        ;
-
-        $('.ui.accordion')
-          .accordion()
-        ;
-
-        var result;
-        var default_text = $('#event-select option:selected').text();
-        var gallery = $('#g-images')
-
-        loadJSON(function (response) {
-          result = JSON.parse(response);
-          makeGallery(result, default_text);
-        })
-
-        $('.ui.selection.dropdown')
-          .dropdown({
-            on: 'click',
-            onChange: function (value, text, $selectedItem) {
-              makeGallery(result, text);  
-            }
-          })
-        ;
-
-        function makeGallery (array, text) {
-          for (x in array) {
-            if (array[x].event == text) {
-              gallery.empty();
-              for (var i=0; i<array[x].links.length; i++) {
-                gallery.append("<img class=\"ui image\" src="+array[x].links[i]+"></img>")
-              }
-            }
-          }
-        }
-
-      })
-    ;
-
-  </script>
+  <link rel="stylesheet" href="/stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/gallery.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130195533-1"></script>
@@ -241,204 +35,87 @@
 
     gtag('config', 'UA-130195533-1');
   </script>
+
+ </head>
+<body class="mdc-typography">
   
-</head>
-
-<body>
-
-  <div class="ui borderless large top fixed hidden menu">
-    <div class="ui right fitted item"
-      style="margin-right: 9em;">
-      <a class="item" href="../">Home</a>
-      <div class="ui dropdown link item">
-        About
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="history">Mission & History</a>
-          <a class="item" href="choir">The Choir</a>
-          <a class="item" href="members">The Members</a>
-        </div>
-      </div>
-      <a class="active item">Gallery</a>
-      <a class="item">Media</a>
+  <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__header">
+      <h3 class="mdc-drawer__title">Resurrection</h3>
+      <h6 class="mdc-drawer__subtitle"></h6>
     </div>
-  </div>
+    <hr class="mdc-list-divider">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
 
+        <a class="mdc-list-item" data-href="/">
+          <i class="mdc-list-item__graphic" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+          </i>
+          <span class="mdc-list-item__text">Home</span>
+        </a>
+        <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" >
+          <i class="mdc-list-item__graphic" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM6.24 5h11.52l.81.97H5.44l.8-.97zM5 19V8h14v11H5zm8.45-9h-2.9v3H8l4 4 4-4h-2.55z"/></svg>
+          </i>
+          <span class="mdc-list-item__text">Gallery</span>
+        </a>
 
-  <!-- Sidebar Menu -->
-  <div class="ui vertical inverted sidebar menu">
-    <div class="ui vertical inverted accordion">
-      <div class="item">
-        <a class="title" href="../">Home</a>
-      </div>
-      <div class="item">
-        <div class="title">
-          About
-          <i class="dropdown icon"></i>
-        </div>
-        <div class="content">
-          <div class="menu">
-            <a class="item" href="history">Mission & History</a>
-            <a class="item" href="choir">The Choir</a>
-            <a class="item" href="members">The Members</a>
-          </div>
-        </div>
-      </div>
-      <div class="active item">
-        <a class="title">Gallery</a>
-      </div>
-      <div class="item">
-        <div class="title">
-          Media
-          <i class="dropdown icon"></i>
-        </div>
-        <div class="content">
-          <div class="menu">
-            <a class="item" href="pray-sing">Hymnal</a>
-            <a class="item" href="audio">MP3</a>
-            <a class="item">Video</a>
-          </div>
-        </div>
-      </div>
+        <hr class="mdc-list-divider">
+        
+        <a class="mdc-list-item" >
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">help_outline</i>
+          <span class="mdc-list-item__text">Help & Feeback</span>
+        </a>
+
+      </nav>
     </div>
-  </div>
+  </aside>
 
+  <div class="mdc-drawer-scrim"></div>
 
-  <!-- Page Contents -->
-  <div class="pusher">
-    <div class="ui inverted vertical masthead center aligned segment">
-
-      <div class="ui container">
-        <div class="ui large inverted right floated secondary pointing menu">
-
-          <a class="toc item">
-            <i class="sidebar icon"></i>
-          </a>
-          
-          <a class="item" href="../">Home</a>
-          <div class="ui dropdown link item">
-            About
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <a class="item" href="history">Mission & History</a>
-              <a class="item" href="choir">The Choir</a>
-              <a class="item" href="members">The Members</a>
-            </div>
-          </div>
-
-          <a class="active item">Gallery</a>
-          <div class="menu">
-            <div class="ui dropdown link item">
-              Media
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <a class="item" href="pray-sing">Hymnal</a>
-                <a class="item" href="audio">MP3</a>
-                <a class="item">Video</a>
-              </div>
-            </div>
-          </div>
-          
-        </div>
+  <div class="mdc-drawer-app-content">
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed app-bar mdc-elevation--z2" id="app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a class="nav-icon material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <span class="mdc-top-app-bar__title">Gallery</span>
+        </section>
       </div>
+    </header>
 
-      <div class="ui text container">
-        <h1 class="ui inverted header">
-          Gallery
-        </h1>
-      </div>
-
-    </div>
-
-    <div class="ui vertical stripe segment">
-      <div class="ui stackable two column grid container">
-
-        <div class="three wide left floated column">
-          <div class="ui container">
-            <div class="ui form">
-              <div class="field">
-                <select class="ui selection dropdown" id="event-select">
-                  <option value="C17">Christmas 2017</option>
-                  <option value="E17">Easter 2017</option>
-                  <option value="E16">Easter 2016</option>
-                </select>
-              </div>
-            </div>
+    <main class="main-content" id="main-content">
+      <div class="mdc-top-app-bar--fixed-adjust">
+  
+        <div id="select-dropdown-card">
+          <div class="mdc-select mdc-elevation--z2">
+            <i class="mdc-select__dropdown-icon material-icons">filter_list</i>
+            <select class="mdc-select__native-control">
+              <option value="" disabled selected></option>
+              <option value="C17">
+                Christmas 2017
+              </option>
+              <option value="E17">
+                Easter 2017
+              </option>
+              <option value="E16">
+                Easter 2016
+              </option>
+            </select>
+            <label class="mdc-floating-label">Pick an Event</label>
+            
           </div>
         </div>
 
-        <div class="thirteen wide right floated column">
-          <div class="ui center aligned container">
-            <div class="ui large rounded images" id="g-images"></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="ui inverted vertical footer segment">
-      <div class="ui container">
-        <div class="ui stackable inverted equal height stackable grid">
-          <div class="six wide column">
-            <h4 class="ui inverted header">GET IN TOUCH</h4>
-            <div class="ui inverted list">
-              <li class="item">Email: resurrectionparishchoir[at]gmail.com</li>
-              <li class="item">Phone:</li>
-            </div>
-            <h4 class="ui inverted header">FOLLOW US ON</h4>
-            <div class="ui container">
-             <!--  <a class="ui large inverted circular icon button" href="mailto:resurrectionparishchoir@gmail.com">
-                <i class="envelope outline icon"></i>
-              </a> -->
-              <a class="ui large inverted circular icon button" href="https://www.facebook.com/Resurrection-Parish-Choir-390749221437123">
-                <i class="facebook f icon"></i>
-              </a>
-              <a class="ui large inverted circular icon button" href="https://instagram.com/resurrectionparishchoir">
-                <i class="instagram icon"></i>
-              </a>
-              <a class="ui large inverted circular icon button">
-                <i class="youtube icon"></i>
-              </a>
-            </div>
-          </div>
-          <div class="five wide column">
-              <h4 class="ui inverted header">QUICK LINKS</h4>
-              <div class="ui inverted link list">
-                  <a href="#" class="item">Sitemap</a>
-                  <a href="history" class="item">About</a>
-                  <a href="#" class="item">Contact Us</a>
-                  <a href="#" class="item">Religious Ceremonies</a>
-                
-              </div>
-          </div>
-
-          <div class="five wide column">
-            <h4 class="ui inverted header">LOCATION</h4>
-            <div class="ui two column grid">
-              <div class="column">
-                <img class="ui small image" src="assets/imgs/map.png">
-              </div>
-              <div class="column">
-                <div class="ui inverted list">
-                <li class="item">Don Bosco Church,</li>
-                <li class="item">Manvelpada Rd,</li>
-                <li class="item">Virar (E),</li>
-                <li class="item">401305</li>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h5 class="ui inverted header">
-          COPYRIGHT © 2018 | ALL RIGHTS RESERVED
-          <div class="sub header">Designed & Developed by Flavion D'sa</div>
-        </h5>
+        <ul class="mdc-image-list mdc-image-list--masonry gallery-fragment"></ul>
         
       </div>
-    </div>
-
+    </main>
   </div>
-</body>
 
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script src="/javascript/docs.js"></script>
+  <script src="/javascript/gallery.js"></script>
+  
+</body>
 </html>

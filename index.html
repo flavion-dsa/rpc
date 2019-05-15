@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Standard Meta -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
   <meta name="google-site-verification" content="nICnvhO3tP-NPcQ4Wl2iG3Ax-9KcqbrbxJLneRWXK1U" />
 
@@ -20,10 +18,6 @@
   <meta property="og:title" content="Resurrection Parish Choir">
   <meta property="og:image" content="http://www.resurrectionparishchoir.gq/assets/imgs/banner_3.jpg">
   <meta property="og:description" content="The official website for Resurrection Parish Choir">
-
-  <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="semantic/dist/semantic.min.js"></script>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
@@ -42,244 +36,26 @@
   <link rel="manifest" href="icons/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
 
-  <!-- Site Properties -->
-  <title>Resurrection Parish Choir</title>
- 
-  <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative|Montserrat' rel='stylesheet'>
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <style type="text/css">
-    .hidden.menu {
-      display: none;
-    }
+  <title>Home | Resurrection Parish Choir</title>
 
-    .masthead.segment {
-      min-height: 700px;
-      padding: 1em 0em;
-      background: transparent;
-    }
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-    .masthead .logo.item img {
-      margin-right: 1em;
-    }
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 
-    .masthead .ui.menu .ui.button {
-      margin-left: 0.5em;
-    }
-
-    .masthead h1.ui.header {
-      margin-top: 6em;
-      margin-bottom: 0em;
-      font-size: 3.5em;
-      font-weight: lighter;
-      font-stretch: extra-expanded;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .masthead h2 {
-      font-size: 1.7em;
-      font-weight: normal;
-    }
-
-    .ui.vertical.stripe {
-      padding: 3em 0em;
-    }
-
-    .ui.vertical.stripe h3 {
-      font-size: 2em;
-    }
-
-    .ui.vertical.stripe .button+h3 {
-      margin-top: 3em;
-    }
-
-    .ui.vertical.stripe .floated.image {
-      clear: both;
-    }
-
-    .ui.vertical.stripe p {
-      flex: 1 0 auto;
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 0.5em 0em 2em;
-    }
-
-    .ui.vertical.stripe .news.column {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-    }
-
-    .ui.vertical.stripe .horizontal.divider {
-      margin: 3em 0em;
-    }
-
-    .ui.vertical.quote {
-      padding: 3em 0em;
-    }
-
-    .ui.vertical.quote h1.ui.quote.header {
-      margin-top: 0.5em;
-      font-size: 4em;
-      font-family: 'Cinzel Decorative', cursive;
-    }
-
-    .footer.segment {
-      padding: 5em 0em;
-    }
-
-    .secondary.pointing.menu .toc.item {
-      display: none;
-    }
-
-    .parallax-window {
-      min-height: 432px;
-      background: transparent;
-    }
-
-    @media only screen and (max-width: 700px) {
-      .ui.fixed.menu {
-        display: none !important;
-      }
-
-      .secondary.pointing.menu .item,
-      .secondary.pointing.menu .menu {
-        display: none;
-      }
-      .secondary.pointing.menu .toc.item {
-        display: block;
-      }
-      .masthead.segment {
-        min-height: 300px;
-      }
-      .masthead h1.ui.header {
-        font-size: 1.8em;
-        margin-top: 8em;
-      }
-      .masthead h2 {
-        margin-top: 0.5em;
-        font-size: 1.5em;
-      }
- 
-      .ui.vertical.quote h1.ui.quote.header {
-        margin-top: 0em;
-        font-size: 2.33em;
-      }
-
-      .parallax-window {
-        min-height: 240px;
-        background: transparent;
-        z-index: -100;
-      }
-
-    }
-
-    .inverted.masthead.segment {
-      background-image: url('assets/imgs/banner.jpg');
-      background-blend-mode: overlay;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-    }
-
-    .ui.left.floated.menu .circular.image {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-  </style>
-
-  <script src="javascript/calendar.js"></script>
-  <script src="javascript/parallax.min.js"></script>
- 
-  <script>
-    $(document)
-      .ready(function () {
-
-        // fix menu when passed
-        $('.masthead')
-          .visibility({
-            once: false,
-            onBottomPassed: function () {
-              $('.fixed.menu').transition('fade in');
-            },
-            onBottomPassedReverse: function () {
-              $('.fixed.menu').transition('fade out');
-            }
-          })
-        ;
-
-        // create sidebar and attach to menu open
-        $('.ui.sidebar')
-          .sidebar('attach events', '.toc.item')
-        ;
-
-        $('.ui.dropdown')
-          .dropdown({on: 'hover'})
-        ;
-
-        $('.ui.accordion')
-          .accordion()
-        ;
-
-        getCountdown();
-        fetchTodaysData(function (response) {
-          var todays_feast = JSON.parse(response);
-          
-          $('#feast-season').append(toTitleCase(todays_feast.season)+" Season");
-          $('#feast-title').append(todays_feast.celebrations[0].title);
-          var m_color = todays_feast.celebrations[0].colour;
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
   
-          if (m_color != 'white') {
-            $('#feast-color').addClass('tertiary inverted '+m_color);
-          }
-        });
+  <link rel="stylesheet" href="/stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/home.css">
 
-        function getCountdown () {
-          var countdown_date = new Date("Jun 9, 2019 00:00:00").getTime();
-          var interval = setInterval(function () {
-            var now = new Date().getTime();
-            var time_left = countdown_date - now;
-            
-            var CONST = 1000*60;
-            $('#days-left').html(Math.floor(time_left/(CONST*60*24)));
-            $('#hrs-left').html(Math.floor((time_left%(CONST*60*24))/(CONST*60)));
-            $('#min-left').html(Math.floor((time_left%(CONST*60))/(CONST)));
-            $('#sec-left').html(Math.floor((time_left%(CONST))/1000));  
-          }, 1000);
-        }
-
-        function toTitleCase(string) {
-          return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-
-      })
-    ;
-
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "name": "Resurrection Parish Choir",
-      "url": "http://www.resurrectionparishchoir.gq",
-      "sameAs": [
-        "https://www.facebook.com/Resurrection-Parish-Choir-390749221437123",
-        "https://instagram.com/resurrectionparishchoir"
-      ],
-      "logo": "http://www.resurrectionparishchoir.gq/icons/ms-icon-310x310.png",
-      "email": "resurrectionparishchoir(at)gmail.com",
-      "founder": {
-        "@type": "Person",
-        "name": "Fr. Blany Pinto, SDB"
-      },
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Resurrection Church"
-      }
-    }
-  </script>
-  
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130195533-1"></script>
   <script>
@@ -291,296 +67,219 @@
   </script>
 
 </head>
-
-<body>
-
-    <div class="ui borderless large top fixed hidden menu">
-      <div class="ui right fitted item"
-        style="margin-right: 9em;">
-        <a class="item">Home</a>
-        <div class="ui dropdown link item">
-          About
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="history">Mission & History</a>
-            <a class="item" href="choir">The Choir</a>
-            <a class="item" href="members">The Members</a>
-          </div>
-        </div>
-        <a class="item" href="gallery">Gallery</a>
-        <div class="ui dropdown link item">
-          Media
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item" href="pray-sing">Hymnal</a>
-            <a class="item" href="audio">MP3</a>
-            <a class="item">Video</a>
-          </div>
-        </div>
-      </div>
+<body class="mdc-typography">
+  
+  <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__header">
+      <h3 class="mdc-drawer__title">Resurrection Parish Choir</h3>
+      <h6 class="mdc-drawer__subtitle"></h6>
     </div>
+    <hr class="mdc-list-divider">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
 
+        <a class="mdc-list-item mdc-list-item--activated" aria-selected="true">
+          <i class="mdc-list-item__graphic" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+          </i>
+          <span class="mdc-list-item__text">Home</span>
+        </a>
+        
+        <a class="mdc-list-item" data-href="/gallery">
+          <i class="mdc-list-item__graphic" aria-hidden="true"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 4v12H8V4h12m0-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 9.67l1.69 2.26 2.48-3.1L19 15H9zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"/></svg>
+          </i>
+          <span class="mdc-list-item__text">Gallery</span>
+        </a>
+        
+        <hr class="mdc-list-divider">
+        
+        <a class="mdc-list-item" >
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">help_outline</i>
+          <span class="mdc-list-item__text">Help & Feeback</span>
+        </a>
+        <a id="a2hs" class="mdc-list-item" >
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">add_to_home_screen</i>
+          <span class="mdc-list-item__text">Add to Home Screen</span>
+        </a>
 
-  <!-- Sidebar Menu -->
-  <div class="ui vertical inverted sidebar menu">
-    <div class="ui vertical inverted accordion">
-      <div class="active item">
-        <div class="title">Home</div>
-      </div>
-      <div class="item">
-        <div class="title">
-          About
-          <i class="dropdown icon"></i>
-        </div>
-        <div class="content">
-          <div class="menu">
-            <a class="item" href="history">Mission & History</a>
-            <a class="item" href="choir">The Choir</a>
-            <a class="item" href="members">The Members</a>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <a class="title" href="gallery">Gallery</a>
-      </div>
-      <div class="item">
-        <div class="title">
-          Media
-          <i class="dropdown icon"></i>
-        </div>
-        <div class="content">
-          <div class="menu">
-            <a class="item" href="pray-sing">Hymnal</a>
-            <a class="item" href="audio">MP3</a>
-            <a class="item">Video</a>
-          </div>
-        </div>
-      </div>
+      </nav>
     </div>
-  </div>
+  </aside>
 
+  <div class="mdc-drawer-scrim"></div>
 
-  <!-- Page Contents -->
-  <div class="pusher">
-
-    <div class="ui inverted vertical masthead center aligned segment">
-
-      <div class="ui container">
-        <!-- <div class="ui large inverted left floated secondary menu">
-          <div class="item">
-            <img class="ui small circular image" alt="Logo" src="assets/imgs/err.png">
-          </div>
-        </div> -->
-        <div class="ui large inverted right floated secondary pointing menu">
-          
-          <a class="toc item">
-            <i class="sidebar icon"></i>
-          </a>
-          
-          <a class="active item">Home</a>
-
-          <div class="ui dropdown link item">
-            About
-            <i class="dropdown icon"></i>
-            <div class="menu">
-              <a class="item" href="history">Mission & History</a>
-              <a class="item" href="choir">The Choir</a>
-              <a class="item" href="members">The Members</a>
-            </div>
-          </div>
-
-          <a class="item" href="gallery">Gallery</a>
-          <div class="menu">
-            <div class="ui dropdown link item">
-              Media
-              <i class="dropdown icon"></i>
-              <div class="menu">
-                <a class="item" href="pray-sing">Hymnal</a>
-                <a class="item" href="audio">MP3</a>
-                <a class="item">Video</a>
-              </div>
-            </div>
-          </div>
-          
-        </div>
+  <div class="mdc-drawer-app-content">
+    <header class="mdc-top-app-bar app-bar mdc-top-app-bar--fixed" id="app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <a class="nav-icon material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <span class="mdc-top-app-bar__title"></span>
+        </section>
       </div>
+    </header>
 
-      <div class="ui text container">
-        <h1 class="ui inverted header">
-          RESURRECTION PARISH CHOIR
-        </h1>
-      </div>
-
-    </div>
-
-    <div class="ui vertical stripe secondary segment">
-      <div class="ui two column center aligned very relaxed stackable grid container">
-        <h3 class="ui teal header" style="margin-bottom:1.33em">Liturgical Calendar</h3>
-        <div class="row">
-          <div class="column" style="display: flex">
-            <div class="ui segment" id="feast-color">
-              <h2 id="feast-season"></h2>
-              <h2 class="ui header" id="feast-title"></h2>
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="ui inverted grey segment">
-              <div class="ui four small inverted statistics">
-                <div class="statistic">
-                  <div class="value" id="days-left">0</div>
-                  <div class="label">Days</div>
-                </div>
-                <div class="statistic">
-                  <div class="value" id="hrs-left">0</div>
-                  <div class="label">Hours</div>
-                </div>
-                <div class="statistic">
-                  <div class="value" id="min-left">0</div>
-                  <div class="label">Minutes</div>
-                </div>
-                <div class="statistic">
-                  <div class="value" id="sec-left">0</div>
-                  <div class="label">Seconds</div>
-                </div>
-              </div>
-              <h2 class="ui header">UNTIL PENTECOST</h2>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </div>
+    <main class="main-content" id="main-content">
     
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_2.jpg" data-z-index="3"></div>
+      <div class="mdc-top-app-bar--fixed-adjust">
 
-    <div class="ui vertical stripe segment">
-      <div class="ui three column center aligned divided very relaxed stackable grid container">
-        <div class="row">
-          <h3 class="ui huge teal header">News & Events</h3>
+        <div class="mdc-tab-bar mdc-elevation--z2" role="tablist">
+          <div class="mdc-tab-scroller">
+            <div class="mdc-tab-scroller__scroll-area">
+              <div class="mdc-tab-scroller__scroll-content">
+                <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                  <span class="mdc-tab__content">
+                    <span class="mdc-tab__text-label">Home</span>
+                  </span>
+                  <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab" role="tab" tabindex="-1">
+                  <span class="mdc-tab__content">
+                    <span class="mdc-tab__text-label">About Us</span>
+                  </span>
+                  <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+                <button class="mdc-tab" role="tab" tabindex="-1">
+                  <span class="mdc-tab__content">
+                    <span class="mdc-tab__text-label">Contact</span>
+                  </span>
+                  <span class="mdc-tab-indicator">
+                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                  </span>
+                  <span class="mdc-tab__ripple"></span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <div class="news column">
-            <div class="ui large header">Feast of Christ the King</div>
-            <p>The Resurrection Parish Choir celebrated the feast of Christ the King on 25th of November.</p>
-            <button class="ui secondary basic animated button">
-              <div class="ui visible content">Read more</div>
-              <div class="hidden content"><i class="right arrow icon"></i></div>
-            </button>
-          </div>
-          <div class="news column">
-            <div class="ui large header">Feast of Assumption</div>
-            <p>The Resurrection Parish Choir celebrated the feast of Assumption of Our Lady on 15th of August.</p>
-            <button class="ui secondary basic animated button">
-              <div class="ui visible content">Read more</div>
-              <div class="hidden content"><i class="right arrow icon"></i></div>
-            </button>
-          </div>
-          <div class="news column">
-            <div class="ui large header">Launch of Logo</div>
-            <p>The Resurrection Parish Choir lauched their logo on the solemnity of Christ the King.</p>
-            <button class="ui secondary basic animated button">
-              <div class="ui visible content">Read more</div>
-              <div class="hidden content"><i class="right arrow icon"></i></div>
-            </button>
-          </div>
-        </div>
+
       </div>
-    </div>
 
-
-    <div class="parallax-window" data-parallax="scroll" data-image-src="assets/imgs/banner_3.jpg" data-z-index="3"></div>
-
-    <div class="ui vertical quote segment">
-      <div class="ui stackable equal height grid container">
-        <div class="row">
-          <div class="left floated column">
-            <i class="grey big quote left icon"></i>
-          </div>
-          <div class="fourteen wide column">
-            <h1 class="ui quote center aligned teal header">
-              He Who Sings Well, Prays Twice
-            </h1>
-          </div>
-          <div class="right aligned column">    
-            <i class="grey big quote right icon"></i>
+      <section class="tab-fragment" id="home-tab">
+        <div class="hero-image"></div>
+        <div class="mdc-card mdc-card--outlined">
+          <div class="mdc-card__primary-text">
+            <h2 class="mdc-card__text-label mdc-typography--headline5">Events</h2>
+            <div class="mdc-card__description mdc-typography--overline">No upcoming events</div>
           </div>
         </div>
+      </section>
+
+      <section class="tab-fragment tab-fragment--hidden" id="about-tab">
         
-      </div>
-    </div>
- 
-    <div class="ui inverted vertical footer segment">
-      <div class="ui container">
-        <div class="ui stackable inverted equal height stackable grid">
-          <div class="six wide column">
-            <h4 class="ui inverted header">GET IN TOUCH</h4>
-            <div class="ui inverted list">
-              <li class="item">Email: resurrectionparishchoir[at]gmail.com</li>
-              <li class="item">Phone:</li>
+        <div class="mdc-card mdc-card--outlined">
+          <div class="mdc-card__primary-text">
+            <h2 class="mdc-card__text-label mdc-typography--headline5">Misson</h2>
+            <p class="mdc-card__description mdc-typography--body2">
+              The Resurrection Parish Choir aims at enriching the liturgical services held in the Parish. The Resurrection Parish Choir sings at the Parish Mass, special feasts and liturgies, occasions, and festivals in the Parish.
+            </p>
+          </div>
+        </div>
+        <div class="mdc-card mdc-card--outlined ui-control">
+          <div class="mdc-card__primary-action">
+            <div class="mdc-card__media mdc-card__media--square"
+              style="background-image: url('/assets/imgs/profile/fr_blany.jpg')">
             </div>
-            <h4 class="ui inverted header">FOLLOW US ON</h4>
-            <div class="ui container">
-             <!--  <a class="ui large inverted circular icon button" href="mailto:resurrectionparishchoir@gmail.com">
-                <i class="envelope outline icon"></i>
-              </a> -->
-              <a class="ui large inverted circular icon button" href="https://www.facebook.com/Resurrection-Parish-Choir-390749221437123">
-                <i class="facebook f icon"></i>
-              </a>
-              <a class="ui large inverted circular icon button" href="https://instagram.com/resurrectionparishchoir">
-                <i class="instagram icon"></i>
-              </a>
-              <a class="ui large inverted circular icon button">
-                <i class="youtube icon"></i>
-              </a>
+            <div class="mdc-card__primary">
+              <h2 class="mdc-card__title mdc-typography--headline6">Fr. Blany Pinto, SDB</h2>
+              <div class="mdc-card__subtitle mdc-typograpghy--subtitle2">Founder</div>
+              <div class="mdc-typography--overline">2008</div>
             </div>
           </div>
-          <div class="five wide column">
-              <h4 class="ui inverted header">QUICK LINKS</h4>
-              <div class="ui inverted link list">
-                  <a href="#" class="item">Sitemap</a>
-                  <a href="history" class="item">About</a>
-                  <a href="#" class="item">Contact Us</a>
-                  <a href="#" class="item">Religious Ceremonies</a>
-                
-              </div>
+        </div>
+        <div class="mdc-card mdc-card--outlined ui-control">
+          <div class="mdc-card__primary-action">
+            <div class="mdc-card__media mdc-card__media--square"
+              style="background-image: url('/assets/imgs/profile/fr_anton.jpg')">
+            </div>
+            <div class="mdc-card__primary">
+              <h2 class="mdc-card__title mdc-typography--headline6">Fr. Anton D'souza, SDB</h2>
+              <div class="mdc-card__subtitle mdc-typograpghy--subtiltle2">Spiritual Director</div>
+              <div class="mdc-typography--overline">2018 - present</div>
+            </div>
           </div>
+        </div>
+        <div class="mdc-card mdc-card--outlined">
+          <div class="mdc-card__primary-text">
+            <h2 class="mdc-card__text-label mdc-typography--headline5">About Us</h2>
+            <p class="mdc-card__description mdc-typography--body2">
+              Founded in the year 2008, the <b>Resurrection Parish Choir</b> has established itself as one of professional choirs in the Salesian province of Mumbai(Bombay), serving its mother church in the city of Virar through their liturgical & choral initiatives that enlighten, enrich and educate its parishioners.
+              <br><br>
+              Led by the Choir Director, Nelson Matthew, the Resurrection Parish Choir has been described as one of the leading liturgical choirs in the province. The Choir is comprised of 20 college students and working youths who have joined the group for their love for music, bonding and most of whom don't have any prior grounding or musical training.
+            </p>
+          </div>
+        </div>
+        <div class="mdc-card mdc-card--outlined">
+          <div class="mdc-card__primary-text">
+            <h2 class="mdc-card__text-label mdc-typography--headline5">Modus Vivendi</h2>
+            <p class="mdc-card__description mdc-typography--body2">
+              The Choir works in conjunction with the Liturgy Committee with regard to selection of hymns in accordance with the liturgy of the day or feast. The Choir sings for all the major events of the Parish including but not limited to Parish festivites, Easter, Christmas & New Year.
+              <br><br>
+              The Choir utilizes the existing Salesian music material viz. <b>Pray Sing Hymnal</b>, in addtion to adopting various other hymns from other sources. All hymns & music used for the liturgy is in consonace and approved by the Parish Priest.
+              <br><br>
+              Practices & rehersals are usually held every Sunday after the evening mass in the Church hall.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div class="five wide column">
-            <h4 class="ui inverted header">LOCATION</h4>
-            <div class="ui two column grid">
-              <div class="column">
-                <img class="ui small image" alt="Map" src="assets/imgs/map.png">
-              </div>
-              <div class="column">
-                <div class="ui inverted list">
-                <li class="item">Don Bosco Church,</li>
-                <li class="item">Manvelpada Rd,</li>
-                <li class="item">Virar (E),</li>
-                <li class="item">401305</li>
-                </div>
+      <section class="tab-fragment tab-fragment--hidden" id="contact-tab">
+        <div class="mdc-card mdc-card--outlined">
+          <div class="mdc-list-group">
+            <h3 class="mdc-card__text-label mdc-typography--headline5">Get in touch</h3>
+            <div class="mdc-list">
+              <a class="mdc-list-item" href="tel:+919975782790">
+                <i class="mdc-list-item__graphic">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51m9.86 12.02c.85.24 1.72.39 2.6.45v1.49c-1.32-.09-2.59-.35-3.8-.75l1.2-1.19M7.5 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1z"/></svg>
+                </i>
+                <span class="mdc-list-item__text">
+                  +91 99757 82790
+                </span>
+              </a>
+              <a class="mdc-list-item" href="mailto:resurrectionparishchoir@gmail.com">
+                <i class="mdc-list-item__graphic">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                </i>
+                <span class="mdc-list-item__text">
+                  resurrectionparishchoir[at]gmail.com
+                </span>
+              </a>
+            </div>
+            <h3 class="mdc-card__text-label mdc-typography--headline5">Follow Us</h3>
+            <div class="mdc-layout-grid">
+              <div class="mdc-layout-grid__cell">
+                <button class="mdc-icon-button" id="facebook-button"
+                  onclick="window.location.href='https://www.facebook.com/resurrectionchoirvirar/'">
+                  <i class="fab fa-facebook-square mdc-icon-button__icon"></i>
+                </button>
+                <button class="mdc-icon-button" id="instagram-button"
+                  onclick="window.location.href='https://instagram.com/resurrectionparishchoir/'">
+                  <i class="fab fa-instagram mdc-icon-button__icon"></i>
+                </button>
+                <button class="mdc-icon-button" id="youtube-button">
+                  <i class="fab fa-youtube mdc-icon-button__icon"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
-
-        <h5 class="ui inverted header">
-          COPYRIGHT © 2018 | ALL RIGHTS RESERVED
-          <div class="sub header">Designed & Developed by Flavion D'sa</div>
-        </h5>
-        
-      </div>
-    </div>
-
+      </section>
+    
+    </main>
   </div>
- 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TDWLG38');</script>
-  <!-- End Google Tag Manager -->
-</body>
 
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script src="/javascript/docs.js"></script>
+  <script src="/javascript/home.js"></script>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/brands.js" integrity="sha384-GtvEzzhN52RvAD7CnSR7TcPw555abR8NK28tAqa/GgIDk59o0TsaK6FHglLstzCf" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/fontawesome.js" integrity="sha384-Ia7KZbX22R7DDSbxNmxHqPQ15ceNzg2U4h5A8dy3K47G2fV1k658BTxXjp7rdhXa" crossorigin="anonymous"></script>
+  
+</body>
 </html>
